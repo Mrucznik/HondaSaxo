@@ -10,7 +10,7 @@ public class StoryManager : MonoBehaviour
 {
     private static StoryManager _instance;
     
-    private Quest _mainQuest;
+    private readonly Quest _mainQuest;
 
     public GameObject JegoMordaPanel;
     public GameObject MojaMordaPanel;
@@ -32,27 +32,8 @@ public class StoryManager : MonoBehaviour
 
     private StoryManager()
     {
-        //Test quest
-        DialogLine startLine =
-            new DialogLine("Czesc Dimitrii",
-                new DialogLine("Spierdalaj",
-                    new DialogChoice("Co chcesz zrobic Dimitriemu",
-                        "Zajebac lepe", new DialogLine("* Lepa odjebala Dimitriiowi glowe! *", null),
-                        "Zasadzic luja z calej epy", new DialogLine("O zesz Ty kurwa!", null),
-                        "Wyjebac z dyni", new DialogLine("* Dimitrii implodowal *", null)
-                    )
-                )
-            );
-
-        DialogLine endLine =
-            new DialogLine("No i dobrze, ze z dech",
-                new DialogLine("No raczej kurwa nie inaczej",
-                    new DialogLine("No i kurwa pierwszorzednie mordo, elo", null)));
-
-        DialogSequence beginningSequence = new DialogSequence(startLine);
-        DialogSequence endingSequence = new DialogSequence(endLine);
-
-        _mainQuest = new Quest(beginningSequence, endingSequence, null);
+        QuestFactory questFactory = new QuestFactory();
+        _mainQuest = questFactory.getQuests();
     }
 
     void Start()
