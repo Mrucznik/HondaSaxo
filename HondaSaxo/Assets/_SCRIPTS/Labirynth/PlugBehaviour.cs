@@ -6,7 +6,7 @@ public class PlugBehaviour : MonoBehaviour
 {
     public float speed = 5f;
     public float rotationSpeed = 5f;
-    private float timeout = 5f;
+    private float timeout = 0f;
     private IEnumerator coroutine;
 
     private ArrayList colliders;
