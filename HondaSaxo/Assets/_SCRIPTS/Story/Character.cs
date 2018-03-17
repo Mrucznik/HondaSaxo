@@ -8,15 +8,14 @@ using UnityEngine.UI;
 
 namespace Assets._SCRIPTS.Story
 {
-    public class Character : MonoBehaviour
+    public class Character
     {
-        public string Name;
-        public Sprite Avatar;
-
+        private string _name;
         private readonly bool _mojaMorda;
 
-        public Character(bool mojaMorda)
+        public Character(string name, bool mojaMorda)
         {
+            _name = name;
             _mojaMorda = mojaMorda;
         }
 
@@ -29,6 +28,7 @@ namespace Assets._SCRIPTS.Story
             }
             else
             {
+                StoryManager.GetInstance().JegoMordaPanel.GetComponent<AvatarDisplayer>().Display(_name);
                 StoryManager.GetInstance().MojaMordaPanel.SetActive(false);
                 StoryManager.GetInstance().JegoMordaPanel.SetActive(true);
             }
