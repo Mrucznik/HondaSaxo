@@ -137,7 +137,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 622918589}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cd7c5c313c5e834182e967130f7d6a3, type: 3}
+  m_Script: {fileID: 11500000, guid: 681073703fcb10a4eaa3fb180022af99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &622918591
@@ -163,9 +163,9 @@ GameObject:
   - component: {fileID: 1221338238}
   - component: {fileID: 1221338237}
   - component: {fileID: 1221338239}
-  - component: {fileID: 1221338240}
   - component: {fileID: 1221338242}
   - component: {fileID: 1221338241}
+  - component: {fileID: 1221338240}
   m_Layer: 0
   m_Name: Plug
   m_TagString: Player
@@ -207,7 +207,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0fd4da0f6ece3964aba7bf3374b45589, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2d8fe9561ae9ab140a5fdeb90e4e6d49, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -325,10 +325,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1221338236}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc7fe8db6eae1f34fb2dd611bec72022, type: 3}
+  m_Script: {fileID: 11500000, guid: b94575351c28fcd4b9461035ca0baeba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 1
   rotationSpeed: 200
 --- !u!60 &1221338241
 PolygonCollider2D:

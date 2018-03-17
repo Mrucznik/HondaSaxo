@@ -5,10 +5,10 @@ public class PlugBehaviour : MonoBehaviour
 {
     public float speed = 5f;
     public float rotationSpeed = 5f;
-
+    private IEnumerator coroutine;
 
     // Update is called once per frame
-    IEnumerable Update () {
+    void Update () {
 		transform.Translate(Vector3.up * Time.deltaTime * speed);
 	    transform.Rotate(Vector3.back, Input.GetAxis("Horizontal") * rotationSpeed * Time.deltaTime);
         if (Time.time % .1f <= 0.01f)
@@ -19,15 +19,16 @@ public class PlugBehaviour : MonoBehaviour
             gameObject.transform.position = transform.position;
             CircleCollider2D col = gameObject.AddComponent<CircleCollider2D>();
             col.enabled = false;
-            var coroutine = enableCollider(col);
+            coroutine = enableCollider(col);
             StartCoroutine(coroutine);
             col.radius = 0.06f;
             gameObject.transform.tag = "Player";
         }
     }
 
-    IEnumerable enableCollider(CircleCollider2D col)
+    IEnumerator enableCollider(CircleCollider2D col)
     {
+        yield return new WaitForSeconds(1);
         col.enabled = true;
     }
 
