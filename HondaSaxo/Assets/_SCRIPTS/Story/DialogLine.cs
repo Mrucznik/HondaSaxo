@@ -11,16 +11,19 @@ namespace Assets._SCRIPTS.Story
     {
         private readonly string _text;
         private readonly IDialog _nextDialog;
+        private readonly Character _character;
 
-        public DialogLine(string text, IDialog nextDialog)
+        public DialogLine(string text, Character character, IDialog nextDialog)
         {
             _text = text;
-            this._nextDialog = nextDialog;
+            _nextDialog = nextDialog;
+            _character = character;
         }
         
         public void Display()
         {
             StoryManager.GetInstance().Text.text = _text;
+            _character.WyswietlMorde();
         }
 
         public IDialog GetNextDialog()
