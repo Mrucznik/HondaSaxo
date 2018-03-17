@@ -31,7 +31,7 @@ namespace Assets._SCRIPTS.Story
 
         public void Display()
         {
-            throw new NotImplementedException();
+
         }
     }
 }
