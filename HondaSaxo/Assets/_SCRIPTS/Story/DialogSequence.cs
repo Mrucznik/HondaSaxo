@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Assets._SCRIPTS.Story
 {
@@ -10,32 +11,54 @@ namespace Assets._SCRIPTS.Story
     {
         private readonly Queue<IDialog> _dialogs;
         private IDialog _activeDialog;
-        private readonly GameObject _textPanel;
-        private float x = 0;
+        private readonly Text _textPanel;
+        private readonly Text[] _choicePanel;
 
-        public DialogSequence(GameObject textPanel)
+        public DialogSequence(Text textPanel, Text[] choicePanel)
         {
             _dialogs = new Queue<IDialog>();
             _textPanel = textPanel;
-
-            AddDialogLine(new DialogLine("Siema pl"));
-            AddDialogLine(new DialogLine("Elo"));
+            _choicePanel = choicePanel;
         }
 
-        public void AddDialogLine(DialogLine dialogLine)
+        public void AddDialog(IDialog dialogLine)
         {
             _dialogs.Enqueue(dialogLine);
         }
 
-        /*public void AddDialogChoice(DialogChoice dialogChoice)
+        public bool Display()
         {
-            _dialogs.Enqueue(dialogChoice);
-        }*/
-
-        public void Display()
-        {
+            if (_dialogs.Count <= 0)
+            {
+                return false;
+            }
             _activeDialog = _dialogs.Dequeue();
-            _activeDialog.Display(_textPanel, new Vector2(0, x));
+
+            ClearTextPanels();
+
+            var dialogLine = _activeDialog as DialogLine;
+            if (dialogLine != null)
+            {
+                dialogLine.Display(_textPanel);
+                return true;
+            }
+
+            var dialogChoice = _activeDialog as DialogChoice;
+            if (dialogChoice != null)
+            {
+                dialogChoice.Display(_choicePanel);
+                return true;
+            }
+            return true;
+        }
+
+        public void ClearTextPanels()
+        {
+            _textPanel.text = "";
+            foreach (var choice in _choicePanel)
+            {
+                choice.text = "";
+            }
         }
     }
 }

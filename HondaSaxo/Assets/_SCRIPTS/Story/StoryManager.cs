@@ -18,12 +18,19 @@ public class StoryManager : MonoBehaviour
     private List<Quest> _quests;
     private Quest _activeQuest;
 
-    public GameObject MordaPanel;
+    public GameObject JegoMordaPanel;
+    public GameObject MojaMordaPanel;
     public GameObject TextPanel;
     public Canvas Canvas;
 
     public Text[] OptionText = new Text[3];
     public Text Text;
+
+    public bool Active
+    {
+        get { return Canvas.gameObject.activeSelf; }
+        set { Canvas.gameObject.SetActive(value); }
+    }
 
     private StoryManager()
     {
@@ -32,23 +39,37 @@ public class StoryManager : MonoBehaviour
     void Start()
     {
         var testQuest = new Quest();
-        testQuest.AddDialogSequence(new DialogSequence(TextPanel));
+        DialogSequence dialogSequence = new DialogSequence(Text, OptionText);
+        
+        dialogSequence.AddDialog(new DialogLine("Siema pl"));
+        dialogSequence.AddDialog(new DialogLine("Elo"));
+        dialogSequence.AddDialog(new DialogChoice("Luj na morde", "Lepa na twarz", "Dynia w klate"));
+
+        testQuest.AddDialogSequence(dialogSequence);
         _quests.Add(testQuest);
+
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.KeypadEnter))
+        if (Active)
         {
-            _quests[0].DisplayNextSequence();
-        }
-        else if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
+            if (Input.GetKeyDown(KeyCode.KeypadEnter))
+            {
+                bool questAvaible = _quests[0].DisplayNextSequence();
+                if (!questAvaible)
+                {
+                    Active = false;
+                }
+            }
+            else if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
 
-        }
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
+            }
+            else if (Input.GetKeyDown(KeyCode.DownArrow))
+            {
 
+            }
         }
     }
 

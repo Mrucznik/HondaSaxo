@@ -16,19 +16,9 @@ namespace Assets._SCRIPTS.Story
             Text = text;
         }
 
-        public void Display(GameObject canvas, Vector2 position)
+        public void Display(Text text)
         {
-            var newText = new GameObject("Text");
-            newText.transform.SetParent(canvas.transform);
-
-            var newTextComp = newText.AddComponent<Text>();
-            newTextComp.text = Text;
-            newTextComp.font = Font.CreateDynamicFontFromOSFont("Arial", 12);
-            newTextComp.color = Color.black;
-            newTextComp.fontSize = 16;
-            newTextComp.transform.position = position;
-            
-            Debug.Log("No jest cos");
+            text.text = Text;
         }
     }
 }
