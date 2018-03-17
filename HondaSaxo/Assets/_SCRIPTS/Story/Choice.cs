@@ -7,27 +7,10 @@ using UnityEngine.Experimental.UIElements;
 
 namespace Assets._SCRIPTS.Story
 {
-    public class Choice : IDialog
+    public class Choice : DialogLine
     {
-        private string _text;
-        private Button _button;
-        private readonly IDialog _dialogOption;
-
-        public Choice(string text, IDialog dialogOption)
+        public Choice(string text) : base(text)
         {
-            this._text = text;
-            _dialogOption = dialogOption;
-            this._button = new Button(ClickEvent);
-        }
-
-        private void ClickEvent()
-        {
-            _dialogOption.Display(Vector2.zero);
-        }
-
-        public void Display(Vector2 position)
-        {
-            throw new NotImplementedException();
         }
     }
 }

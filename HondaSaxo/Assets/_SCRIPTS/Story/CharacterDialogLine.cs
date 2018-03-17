@@ -7,27 +7,28 @@ using UnityEngine.UI;
 
 namespace Assets._SCRIPTS.Story
 {
-    public class DialogLine : IDialog
+    public class CharacterDialogLine : IDialog
     {
+        public Character Interlocutor { get; private set; }
         public string Text { get; private set; }
+        private GameObject _textObject;
 
-        public DialogLine(string text)
+        public CharacterDialogLine(Character interlocutor, string text)
         {
+            Interlocutor = interlocutor;
             Text = text;
         }
 
         public void Display(GameObject canvas, Vector2 position)
         {
-            var newText = new GameObject("Text");
-            newText.transform.SetParent(canvas.transform);
-
-            var newTextComp = newText.AddComponent<Text>();
+            Interlocutor.WyswietlMorde();
+            var newTextComp = canvas.AddComponent<Text>();
             newTextComp.text = Text;
             newTextComp.font = Font.CreateDynamicFontFromOSFont("Arial", 12);
             newTextComp.color = Color.black;
             newTextComp.fontSize = 16;
             newTextComp.transform.position = position;
-            
+
             Debug.Log("No jest cos");
         }
     }

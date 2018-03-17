@@ -8,6 +8,6 @@ namespace Assets._SCRIPTS.Story
 {
     public interface IDialog
     {
-        void Display(Vector2 position);
+        void Display(GameObject canvas, Vector2 position);
     }
 }
