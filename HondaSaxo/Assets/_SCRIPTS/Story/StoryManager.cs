@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Assets._SCRIPTS.Story;
 using UnityEngine;
@@ -7,16 +8,9 @@ using UnityEngine.UI;
 
 public class StoryManager : MonoBehaviour
 {
-    /*
-     * Co powinno zawierać tworzenie fabuły
-     * - Tworzenie postaci
-     * - Wpływ gry na reakcje postaci
-     * - Questy
-     */
     private static StoryManager _instance;
-
-    private List<Quest> _quests;
-    private Quest _activeQuest;
+    
+    private Quest _mainQuest;
 
     public GameObject JegoMordaPanel;
     public GameObject MojaMordaPanel;
@@ -26,6 +20,10 @@ public class StoryManager : MonoBehaviour
     public Text[] OptionText = new Text[3];
     public Text Text;
 
+    public readonly List<Action> KeyEnterEvents = new List<Action>();
+    public readonly List<Action> KeyUpEvents = new List<Action>();
+    public readonly List<Action> KeyDownEvents = new List<Action>();
+
     public bool Active
     {
         get { return Canvas.gameObject.activeSelf; }
@@ -34,19 +32,33 @@ public class StoryManager : MonoBehaviour
 
     private StoryManager()
     {
-        _quests = new List<Quest>();
+        //Test quest
+        DialogLine startLine =
+            new DialogLine("Czesc Dimitrii",
+                new DialogLine("Spierdalaj",
+                    new DialogChoice("Co chcesz zrobic Dimitriemu",
+                        "Zajebac lepe", new DialogLine("* Lepa odjebala Dimitriiowi glowe! *", null),
+                        "Zasadzic luja z calej epy", new DialogLine("O zesz Ty kurwa!", null),
+                        "Wyjebac z dyni", new DialogLine("* Dimitrii implodowal *", null)
+                    )
+                )
+            );
+
+        DialogLine endLine =
+            new DialogLine("No i dobrze, ze z dech",
+                new DialogLine("No raczej kurwa nie inaczej",
+                    new DialogLine("No i kurwa pierwszorzednie mordo, elo", null)));
+
+        DialogSequence beginningSequence = new DialogSequence(startLine);
+        DialogSequence endingSequence = new DialogSequence(endLine);
+
+        _mainQuest = new Quest(beginningSequence, endingSequence, null);
     }
+
     void Start()
     {
-        var testQuest = new Quest();
-        DialogSequence dialogSequence = new DialogSequence(Text, OptionText);
-        
-        dialogSequence.AddDialog(new DialogLine("Siema pl"));
-        dialogSequence.AddDialog(new DialogLine("Elo"));
-        dialogSequence.AddDialog(new DialogChoice("Luj na morde", "Lepa na twarz", "Dynia w klate"));
-
-        testQuest.AddDialogSequence(dialogSequence);
-        _quests.Add(testQuest);
+        _instance = this;
+        Active = false;
 
     }
 
@@ -54,21 +66,33 @@ public class StoryManager : MonoBehaviour
     {
         if (Active)
         {
-            if (Input.GetKeyDown(KeyCode.KeypadEnter))
+            if (Input.GetKeyDown(KeyCode.Return))
             {
-                bool questAvaible = _quests[0].DisplayNextSequence();
-                if (!questAvaible)
+                foreach (var keyEnter in KeyEnterEvents.ToArray())
                 {
-                    Active = false;
+                    keyEnter();
                 }
             }
             else if (Input.GetKeyDown(KeyCode.UpArrow))
             {
-
+                foreach (var keyUpEvent in KeyUpEvents.ToArray())
+                {
+                    keyUpEvent();
+                }
             }
             else if (Input.GetKeyDown(KeyCode.DownArrow))
             {
-
+                foreach (var keyDownEvent in KeyDownEvents.ToArray())
+                {
+                    keyDownEvent();
+                }
+            }
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.KeypadEnter))
+            {
+                _mainQuest.BeginQuest();
             }
         }
     }
@@ -80,11 +104,6 @@ public class StoryManager : MonoBehaviour
 
     public static StoryManager GetInstance()
     {
-        if (_instance == null)
-        {
-            return new StoryManager();
-        }
-
         return _instance;
     }
 }
