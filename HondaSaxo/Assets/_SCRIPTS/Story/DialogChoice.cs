@@ -8,11 +8,13 @@ namespace Assets._SCRIPTS.Story
         private readonly IDialog[] _nextDialog = new IDialog[3];
         private readonly string[] _choices = new string[3];
         private readonly string _title;
+        private readonly Character _character;
         private int _activeChoice = 0;
 
-        public DialogChoice(string title, string choice1, IDialog nextDialog1, string choice2, IDialog nextDialog2, string choice3, IDialog nextDialog3)
+        public DialogChoice(string title, Character character, string choice1, IDialog nextDialog1, string choice2, IDialog nextDialog2, string choice3, IDialog nextDialog3)
         {
             _title = title;
+            _character = character;
             _nextDialog[0] = nextDialog1;
             _nextDialog[1] = nextDialog2;
             _nextDialog[2] = nextDialog3;
@@ -37,7 +39,7 @@ namespace Assets._SCRIPTS.Story
         {
             foreach (var t in StoryManager.GetInstance().OptionText)
             {
-                t.color = Color.black;
+                t.color = Color.white;
             }
             StoryManager.GetInstance().OptionText[_activeChoice].color = Color.green;
         }
@@ -50,6 +52,7 @@ namespace Assets._SCRIPTS.Story
                 StoryManager.GetInstance().OptionText[i].text = "- " + _choices[i];
             }
             HighlightActiveOption();
+            _character.WyswietlMorde();
         }
 
         public IDialog GetNextDialog()

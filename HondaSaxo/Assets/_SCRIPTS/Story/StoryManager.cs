@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using Assets._SCRIPTS.Story;
 using UnityEngine;
-using UnityEngine.Experimental.UIElements;
 using UnityEngine.UI;
 
 public class StoryManager : MonoBehaviour
 {
     private static StoryManager _instance;
     
-    private readonly Quest _mainQuest;
+    public Quest ActiveQuest;
 
     public GameObject JegoMordaPanel;
     public GameObject MojaMordaPanel;
@@ -24,6 +22,7 @@ public class StoryManager : MonoBehaviour
     public readonly List<Action> KeyUpEvents = new List<Action>();
     public readonly List<Action> KeyDownEvents = new List<Action>();
 
+
     public bool Active
     {
         get { return Canvas.gameObject.activeSelf; }
@@ -33,7 +32,7 @@ public class StoryManager : MonoBehaviour
     private StoryManager()
     {
         QuestFactory questFactory = new QuestFactory();
-        _mainQuest = questFactory.getQuests();
+        ActiveQuest = questFactory.GetQuests();
     }
 
     void Start()
@@ -73,7 +72,7 @@ public class StoryManager : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.KeypadEnter))
             {
-                _mainQuest.BeginQuest();
+                ActiveQuest.BeginQuest();
             }
         }
     }
