@@ -11,19 +11,19 @@ MonoBehaviour:
   m_Script: {fileID: -667331979, guid: 89f0137620f6af44b9ba852b4190e64e, type: 3}
   m_Name: kremlin
   m_EditorClassIdentifier: 
-  hashCode: 0
+  hashCode: 9954362
   material: {fileID: 21329768008199858}
-  materialHashCode: 0
+  materialHashCode: -1333157775
   fontAssetType: 2
   m_fontInfo:
     Name: Kremlin
     PointSize: 76
-    Scale: 0
+    Scale: 1
     CharacterCount: 97
     LineHeight: 87
     Baseline: 0
     Ascender: 69
-    CapHeight: 0
+    CapHeight: 56
     Descender: -16
     CenterLine: 0
     SuperscriptOffset: 69
@@ -33,7 +33,7 @@ MonoBehaviour:
     UnderlineThickness: 1.78125
     strikethrough: 19.272728
     strikethroughThickness: 1.78125
-    TabWidth: 0
+    TabWidth: 140
     Padding: 5
     AtlasWidth: 512
     AtlasHeight: 512
@@ -42,10 +42,10 @@ MonoBehaviour:
   - id: 32
     x: 5
     y: 507
-    width: 0
-    height: 0
+    width: 14
+    height: 85
     xOffset: 0
-    yOffset: 0
+    yOffset: 69
     xAdvance: 14
     scale: 1
   - id: 33
@@ -963,12 +963,14 @@ MonoBehaviour:
     italicTypeface: {fileID: 0}
   - regularTypeface: {fileID: 0}
     italicTypeface: {fileID: 0}
+  m_characterSet: 
   normalStyle: 0
   normalSpacingOffset: 0
   boldStyle: 0.75
   boldSpacing: 7
   italicStyle: 35
   tabSize: 10
+  m_oldTabSize: 10
 --- !u!21 &21329768008199858
 Material:
   serializedVersion: 6
