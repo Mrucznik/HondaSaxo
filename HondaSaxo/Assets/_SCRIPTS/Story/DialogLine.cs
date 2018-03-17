@@ -9,16 +9,23 @@ namespace Assets._SCRIPTS.Story
 {
     public class DialogLine : IDialog
     {
-        public string Text { get; private set; }
+        private readonly string _text;
+        private readonly IDialog _nextDialog;
 
-        public DialogLine(string text)
+        public DialogLine(string text, IDialog nextDialog)
         {
-            Text = text;
+            _text = text;
+            this._nextDialog = nextDialog;
+        }
+        
+        public void Display()
+        {
+            StoryManager.GetInstance().Text.text = _text;
         }
 
-        public void Display(Text text)
+        public IDialog GetNextDialog()
         {
-            text.text = Text;
+            return _nextDialog;
         }
     }
 }

@@ -9,55 +9,84 @@ namespace Assets._SCRIPTS.Story
 {
     public class DialogSequence
     {
-        private readonly Queue<IDialog> _dialogs;
+        private readonly IDialog _startDialog;
         private IDialog _activeDialog;
-        private readonly Text _textPanel;
-        private readonly Text[] _choicePanel;
+        private readonly List<DialogChoice> _choices;
 
-        public DialogSequence(Text textPanel, Text[] choicePanel)
+        public DialogSequence(IDialog startDialog)
         {
-            _dialogs = new Queue<IDialog>();
-            _textPanel = textPanel;
-            _choicePanel = choicePanel;
+            _choices = new List<DialogChoice>();
+            _startDialog = startDialog;
         }
 
-        public void AddDialog(IDialog dialogLine)
+        public void StartDialog()
         {
-            _dialogs.Enqueue(dialogLine);
-        }
-
-        public bool Display()
-        {
-            if (_dialogs.Count <= 0)
-            {
-                return false;
-            }
-            _activeDialog = _dialogs.Dequeue();
-
             ClearTextPanels();
+            _startDialog.Display();
+            _activeDialog = _startDialog;
 
-            var dialogLine = _activeDialog as DialogLine;
-            if (dialogLine != null)
-            {
-                dialogLine.Display(_textPanel);
-                return true;
-            }
-
-            var dialogChoice = _activeDialog as DialogChoice;
-            if (dialogChoice != null)
-            {
-                dialogChoice.Display(_choicePanel);
-                return true;
-            }
-            return true;
+            StoryManager.GetInstance().Active = true;
+            StoryManager.GetInstance().KeyEnterEvents.Add(OnKeyEnter);
+            StoryManager.GetInstance().KeyUpEvents.Add(OnKeyUp);
+            StoryManager.GetInstance().KeyDownEvents.Add(OnKeyDown);
         }
 
-        public void ClearTextPanels()
+        private void StopDialog()
         {
-            _textPanel.text = "";
-            foreach (var choice in _choicePanel)
+            StoryManager.GetInstance().Active = false;
+            StoryManager.GetInstance().KeyEnterEvents.Remove(OnKeyEnter);
+            StoryManager.GetInstance().KeyUpEvents.Remove(OnKeyUp);
+            StoryManager.GetInstance().KeyDownEvents.Remove(OnKeyDown);
+        }
+
+        private void ClearTextPanels()
+        {
+            StoryManager.GetInstance().Text.text = "";
+            foreach (var choice in StoryManager.GetInstance().OptionText)
             {
                 choice.text = "";
+            }
+        }
+
+        private void OnKeyEnter()
+        {
+            if (_activeDialog != null)
+            {
+                //dodaj do podjętych wyborów
+                var dialog = _activeDialog as DialogChoice;
+                if (dialog != null)
+                {
+                    _choices.Add(dialog);
+                }
+
+                ClearTextPanels();
+                _activeDialog = _activeDialog.GetNextDialog();
+                if (_activeDialog != null)
+                {
+                    _activeDialog.Display();
+                }
+                else
+                {
+                    StopDialog();
+                }
+            }
+        }
+
+        private void OnKeyUp()
+        {
+            var dialog = _activeDialog as DialogChoice;
+            if (dialog != null)
+            {
+                dialog.NextActiveOption();
+            }
+        }
+
+        private void OnKeyDown()
+        {
+            var dialog = _activeDialog as DialogChoice;
+            if (dialog != null)
+            {
+                dialog.PreviousActiveOption();
             }
         }
     }
