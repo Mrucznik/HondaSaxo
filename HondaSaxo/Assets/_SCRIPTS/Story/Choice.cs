@@ -11,10 +11,11 @@ namespace Assets._SCRIPTS.Story
         private string _text;
         private Button _button;
 
-        public Choice(string text, Button button)
+        public Choice(string text)
         {
             this._text = text;
             this._button = button;
+
         }
     }
 }
