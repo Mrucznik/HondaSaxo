@@ -7,7 +7,7 @@ using UnityEngine.Experimental.UIElements;
 
 namespace Assets._SCRIPTS.Story
 {
-    public class DialogChoice : IDialog
+    public class DialogChoice
     {
         private List<Choice> _choices;
 
