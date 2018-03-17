@@ -3,57 +3,61 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Assets._SCRIPTS.Story
 {
-    public class DialogSequence : MonoBehaviour
+    public class DialogSequence
     {
         private readonly Queue<IDialog> _dialogs;
         private IDialog _activeDialog;
-        private GameObject _canvas;
-        private float x = 0;
+        private readonly Text _textPanel;
+        private readonly Text[] _choicePanel;
 
-        public DialogSequence()
+        public DialogSequence(Text textPanel, Text[] choicePanel)
         {
             _dialogs = new Queue<IDialog>();
-
-            AddDialogLine(new DialogLine("Siema pl"));
-            AddDialogLine(new DialogLine("Elo"));
+            _textPanel = textPanel;
+            _choicePanel = choicePanel;
         }
 
-        void Start()
-        {
-            _canvas = new GameObject("DialogSequenceCanvas");
-            _canvas.AddComponent<Canvas>();
-            Canvas myCanvas = _canvas.GetComponent<Canvas>();
-            myCanvas.transform.localScale = new Vector3(1, .5f, 1);
-        }
-
-        public void AddDialogLine(DialogLine dialogLine)
+        public void AddDialog(IDialog dialogLine)
         {
             _dialogs.Enqueue(dialogLine);
         }
 
-        /*public void AddDialogChoice(DialogChoice dialogChoice)
+        public bool Display()
         {
-            _dialogs.Enqueue(dialogChoice);
-        }*/
+            if (_dialogs.Count <= 0)
+            {
+                return false;
+            }
+            _activeDialog = _dialogs.Dequeue();
 
-        void Update()
+            ClearTextPanels();
+
+            var dialogLine = _activeDialog as DialogLine;
+            if (dialogLine != null)
+            {
+                dialogLine.Display(_textPanel);
+                return true;
+            }
+
+            var dialogChoice = _activeDialog as DialogChoice;
+            if (dialogChoice != null)
+            {
+                dialogChoice.Display(_choicePanel);
+                return true;
+            }
+            return true;
+        }
+
+        public void ClearTextPanels()
         {
-            if (Input.GetKeyDown(KeyCode.KeypadEnter))
+            _textPanel.text = "";
+            foreach (var choice in _choicePanel)
             {
-                _activeDialog = _dialogs.Dequeue();
-                _activeDialog.Display(_canvas, new Vector2(0, x));
-                x += 20;
-            }
-            else if (Input.GetKeyDown(KeyCode.UpArrow))
-            {
-
-            }
-            else if (Input.GetKeyDown(KeyCode.DownArrow))
-            {
-
+                choice.text = "";
             }
         }
     }

@@ -18,5 +18,10 @@ namespace Assets._SCRIPTS.Story
         {
             _dialogSequences.Add(dialog);
         }
+
+        public bool DisplayNextSequence()
+        {
+            return _dialogSequences[0].Display();
+        }
     }
 }
