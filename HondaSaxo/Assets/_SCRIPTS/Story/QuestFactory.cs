@@ -58,7 +58,9 @@ namespace Assets._SCRIPTS.Story
             DialogSequence beginningSequence = new DialogSequence(startLine);
             DialogSequence endingSequence = new DialogSequence(endLine);
 
-            return new Quest(beginningSequence, endingSequence, nextQuest);
+            Quest q = new Quest(beginningSequence, endingSequence, nextQuest);
+            q.AddDialogSequence("Elena", new DialogSequence(new DialogLine("* Dimitrii implodowal *", _elena, null)));
+            return q;
         }
         private Quest GetQuest2(Quest nextQuest)
         {
