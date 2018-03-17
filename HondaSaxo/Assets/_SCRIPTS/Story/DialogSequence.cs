@@ -14,6 +14,9 @@ namespace Assets._SCRIPTS.Story
         public DialogSequence()
         {
             _dialogs = new Queue<IDialog>();
+
+            AddDialogLine(new DialogLine(new Character(), "Siema pl"));
+            AddDialogLine(new DialogLine(new Character(), "Elo"));
         }
 
         public void AddDialogLine(DialogLine dialogLine)
@@ -28,16 +31,16 @@ namespace Assets._SCRIPTS.Story
 
         void Update()
         {
-            if (Input.GetKey(KeyCode.KeypadEnter))
+            if (Input.GetKeyDown(KeyCode.KeypadEnter))
             {
                 _activeDialog = _dialogs.Dequeue();
                 _activeDialog.Display(new Vector2(0, 0));
             }
-            else if (Input.GetKey(KeyCode.UpArrow))
+            else if (Input.GetKeyDown(KeyCode.UpArrow))
             {
 
             }
-            else if (Input.GetKey(KeyCode.DownArrow))
+            else if (Input.GetKeyDown(KeyCode.DownArrow))
             {
 
             }

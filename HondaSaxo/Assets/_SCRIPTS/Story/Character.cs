@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Assets._SCRIPTS.Story
 {
-    public class Character : MonoBehaviour
+    public class Character
     {
         public Character()
         {
