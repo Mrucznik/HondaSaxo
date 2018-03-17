@@ -11,9 +11,4 @@ public class ObstacleBehaviour : MonoBehaviour {
 	void Update () {
 		
 	}
-
-    void setSprite(Texture2D texture2D)
-    {
-        GetComponent<Sprite>().texture =  texture2D;
-    }
 }
