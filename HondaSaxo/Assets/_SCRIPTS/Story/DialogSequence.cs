@@ -6,9 +6,10 @@ using UnityEngine;
 
 namespace Assets._SCRIPTS.Story
 {
-    public class DialogSequence : IDialog
+    public class DialogSequence : MonoBehaviour
     {
-        private Queue<IDialog> _dialogs;
+        private readonly Queue<IDialog> _dialogs;
+        private IDialog _activeDialog;
 
         public DialogSequence()
         {
@@ -25,14 +26,21 @@ namespace Assets._SCRIPTS.Story
             _dialogs.Enqueue(dialogChoice);
         }
 
-        public void Talk()
+        void Update()
         {
-            _dialogs.Dequeue();
-        }
+            if (Input.GetKey(KeyCode.KeypadEnter))
+            {
+                _activeDialog = _dialogs.Dequeue();
+                _activeDialog.Display(new Vector2(0, 0));
+            }
+            else if (Input.GetKey(KeyCode.UpArrow))
+            {
 
-        public void Display(Vector2 position)
-        {
+            }
+            else if (Input.GetKey(KeyCode.DownArrow))
+            {
 
+            }
         }
     }
 }

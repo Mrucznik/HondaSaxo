@@ -20,5 +20,10 @@ namespace Assets._SCRIPTS.Story
 
             }
         }
+
+        public void WyswietlMorde()
+        {
+
+        }
     }
 }
