@@ -16,7 +16,6 @@ public class CityMapBehaviour : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     {
-
         transform.Translate(Vector3.up * Input.GetAxis("Vertical") * speed * Time.deltaTime);
         transform.Translate(Vector3.right * Input.GetAxis("Horizontal") * speed * Time.deltaTime);
 
@@ -30,7 +29,6 @@ public class CityMapBehaviour : MonoBehaviour {
         animator.SetInteger("state", 4);
         else
         animator.SetInteger("state", 0);
-        
-        
+
     }
 }
