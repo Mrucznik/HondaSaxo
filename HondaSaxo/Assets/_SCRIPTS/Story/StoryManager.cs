@@ -33,7 +33,7 @@ public class StoryManager : MonoBehaviour
     private StoryManager()
     {
         QuestFactory questFactory = new QuestFactory();
-        _mainQuest = questFactory.getQuests();
+        _mainQuest = questFactory.GetQuests();
     }
 
     void Start()

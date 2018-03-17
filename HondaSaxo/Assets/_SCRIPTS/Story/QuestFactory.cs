@@ -7,10 +7,8 @@ namespace Assets._SCRIPTS.Story
 {
     public class QuestFactory
     {
-        public Quest getQuests()
+        private Quest GetQuest1(Quest nextQuest)
         {
-
-            //Test quest
             DialogLine startLine =
                 new DialogLine("Czesc Dimitrii",
                     new DialogLine("Spierdalaj",
@@ -29,8 +27,33 @@ namespace Assets._SCRIPTS.Story
 
             DialogSequence beginningSequence = new DialogSequence(startLine);
             DialogSequence endingSequence = new DialogSequence(endLine);
-            
-            return new Quest(beginningSequence, endingSequence, null);
+
+            return new Quest(beginningSequence, endingSequence, nextQuest);
+        }
+        private Quest GetQuest2(Quest nextQuest)
+        {
+            DialogLine startLine = new DialogLine("Quest nr 2 poczatek", null);
+            DialogLine endLine = new DialogLine("Quest nr 2 koniec", null);
+
+            DialogSequence beginningSequence = new DialogSequence(startLine);
+            DialogSequence endingSequence = new DialogSequence(endLine);
+
+            return new Quest(beginningSequence, endingSequence, nextQuest);
+        }
+        private Quest GetQuest3(Quest nextQuest)
+        {
+            DialogLine startLine = new DialogLine("Quest nr 3 poczatek", null);
+            DialogLine endLine = new DialogLine("Quest nr 3 koniec", null);
+
+            DialogSequence beginningSequence = new DialogSequence(startLine);
+            DialogSequence endingSequence = new DialogSequence(endLine);
+
+            return new Quest(beginningSequence, endingSequence, nextQuest);
+        }
+
+        public Quest GetQuests()
+        {
+            return GetQuest1(GetQuest2(GetQuest3(null)));
         }
 
     }
