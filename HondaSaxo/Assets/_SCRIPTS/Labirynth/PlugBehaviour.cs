@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlugBehaviour : MonoBehaviour
@@ -19,9 +18,11 @@ public class PlugBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update ()
     {   
+
         if(timeout > 0) timeout -= Time.deltaTime;
 		transform.Translate(Vector3.up * Time.deltaTime * speed);
 	    transform.Rotate(Vector3.back, Input.GetAxis("Horizontal") * rotationSpeed * Time.deltaTime);
+
         if (Time.time % .1f <= 0.01f)
         {
             GameObject gameObject = new GameObject("collider");
@@ -62,6 +63,11 @@ public class PlugBehaviour : MonoBehaviour
                 GameObject.Find("LabirynthManager").gameObject.GetComponent<LabirynthManager>();
 
             labirynthManager.loseLife();
+        }
+
+        if (collision.transform.tag == "Finish")
+        {
+            Debug.Log("Destination reached");
         }
     }
 
