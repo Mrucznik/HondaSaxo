@@ -1,29 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Assets._SCRIPTS.Story
+﻿namespace Assets._SCRIPTS.Story
 {
     public class QuestFactory
     {
+        private Character elektrij = new Character(true);
+        private Character innaMorda = new Character(false);
+        public QuestFactory()
+        {
+
+        }
+
         private Quest GetQuest1(Quest nextQuest)
         {
             DialogLine startLine =
-                new DialogLine("Czesc Dimitrii",
-                    new DialogLine("Spierdalaj",
-                        new DialogChoice("Co chcesz zrobic Dimitriemu",
-                            "Zajebac lepe", new DialogLine("* Lepa odjebala Dimitriiowi glowe! *", null),
-                            "Zasadzic luja z calej epy", new DialogLine("O zesz Ty kurwa!", null),
-                            "Wyjebac z dyni", new DialogLine("* Dimitrii implodowal *", null)
+                new DialogLine("- Czesc Dimitrii", elektrij,
+                    new DialogLine("- Spierdalaj", innaMorda,
+                        new DialogChoice("Co chcesz zrobic Dimitriemu", elektrij,
+                            "Zajebac lepe", new DialogLine("* Lepa odjebala Dimitriiowi glowe! *", innaMorda, null),
+                            "Zasadzic luja z calej epy", new DialogLine("- O zesz Ty kurwa!", innaMorda, null),
+                            "Wyjebac z dyni", new DialogLine("* Dimitrii implodowal *", innaMorda, null)
                         )
                     )
                 );
 
             DialogLine endLine =
-                new DialogLine("No i dobrze, ze z dech",
-                    new DialogLine("No raczej kurwa nie inaczej",
-                        new DialogLine("No i kurwa pierwszorzednie mordo, elo", null)));
+                new DialogLine("No i dobrze, ze z dech", elektrij,
+                    new DialogLine("No raczej kurwa nie inaczej", innaMorda,
+                        new DialogLine("No i kurwa pierwszorzednie mordo, elo", elektrij, null)));
 
             DialogSequence beginningSequence = new DialogSequence(startLine);
             DialogSequence endingSequence = new DialogSequence(endLine);
@@ -32,8 +34,8 @@ namespace Assets._SCRIPTS.Story
         }
         private Quest GetQuest2(Quest nextQuest)
         {
-            DialogLine startLine = new DialogLine("Quest nr 2 poczatek", null);
-            DialogLine endLine = new DialogLine("Quest nr 2 koniec", null);
+            DialogLine startLine = new DialogLine("Quest nr 2 poczatek", elektrij, null);
+            DialogLine endLine = new DialogLine("Quest nr 2 koniec", elektrij, null);
 
             DialogSequence beginningSequence = new DialogSequence(startLine);
             DialogSequence endingSequence = new DialogSequence(endLine);
@@ -42,8 +44,8 @@ namespace Assets._SCRIPTS.Story
         }
         private Quest GetQuest3(Quest nextQuest)
         {
-            DialogLine startLine = new DialogLine("Quest nr 3 poczatek", null);
-            DialogLine endLine = new DialogLine("Quest nr 3 koniec", null);
+            DialogLine startLine = new DialogLine("Quest nr 3 poczatek", elektrij, null);
+            DialogLine endLine = new DialogLine("Quest nr 3 koniec", elektrij, null);
 
             DialogSequence beginningSequence = new DialogSequence(startLine);
             DialogSequence endingSequence = new DialogSequence(endLine);
