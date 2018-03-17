@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 
 namespace Assets._SCRIPTS.Story
 {
@@ -29,7 +30,7 @@ namespace Assets._SCRIPTS.Story
             _dialogs.Dequeue();
         }
 
-        public void Display()
+        public void Display(Vector2 position)
         {
 
         }

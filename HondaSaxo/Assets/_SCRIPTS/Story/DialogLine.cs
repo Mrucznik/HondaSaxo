@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 
 namespace Assets._SCRIPTS.Story
 {
@@ -16,7 +17,7 @@ namespace Assets._SCRIPTS.Story
             Text = text;
         }
 
-        public void Display()
+        public void Display(Vector2 position)
         {
             throw new NotImplementedException();
         }

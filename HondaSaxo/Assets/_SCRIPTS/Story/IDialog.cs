@@ -6,8 +6,8 @@ using UnityEngine;
 
 namespace Assets._SCRIPTS.Story
 {
-    interface IDialog
+    public interface IDialog
     {
-        void Display();
+        void Display(Vector2 position);
     }
 }
