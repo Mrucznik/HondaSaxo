@@ -10,7 +10,7 @@ namespace Assets._SCRIPTS.Story
         private readonly Quest _nextQuest;
         private readonly DialogSequence _beginningSequence;
         private readonly DialogSequence _endingSequence;
-        private readonly Dictionary<Character, DialogSequence> _dialogSequences;
+        private readonly Dictionary<string, DialogSequence> _dialogSequences;
 
         private DialogSequence _activeDialogSequence;
 
@@ -20,15 +20,15 @@ namespace Assets._SCRIPTS.Story
             this._beginningSequence = beginningSequence;
             this._endingSequence = endingSequence;
 
-            _dialogSequences = new Dictionary<Character, DialogSequence>();
+            _dialogSequences = new Dictionary<string, DialogSequence>();
         }
 
-        public void AddDialogSequence(Character c, DialogSequence dialog)
+        public void AddDialogSequence(string c, DialogSequence dialog)
         {
             _dialogSequences.Add(c, dialog);
         }
 
-        public void StartCharacterSequence(Character c)
+        public void StartCharacterSequence(string c)
         {
             _activeDialogSequence = _dialogSequences[c];
             _activeDialogSequence.StartDialog();
@@ -44,6 +44,7 @@ namespace Assets._SCRIPTS.Story
         {
             _activeDialogSequence = _endingSequence;
             _endingSequence.StartDialog();
+            StoryManager.GetInstance().ActiveQuest = _nextQuest;
             return _nextQuest;
         }
     }
