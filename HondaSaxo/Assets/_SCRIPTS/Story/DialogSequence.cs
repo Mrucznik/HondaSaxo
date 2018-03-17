@@ -6,27 +6,20 @@ using UnityEngine;
 
 namespace Assets._SCRIPTS.Story
 {
-    public class DialogSequence : MonoBehaviour
+    public class DialogSequence
     {
         private readonly Queue<IDialog> _dialogs;
         private IDialog _activeDialog;
-        private GameObject _canvas;
+        private readonly GameObject _textPanel;
         private float x = 0;
 
-        public DialogSequence()
+        public DialogSequence(GameObject textPanel)
         {
             _dialogs = new Queue<IDialog>();
+            _textPanel = textPanel;
 
             AddDialogLine(new DialogLine("Siema pl"));
             AddDialogLine(new DialogLine("Elo"));
-        }
-
-        void Start()
-        {
-            _canvas = new GameObject("DialogSequenceCanvas");
-            _canvas.AddComponent<Canvas>();
-            Canvas myCanvas = _canvas.GetComponent<Canvas>();
-            myCanvas.transform.localScale = new Vector3(1, .5f, 1);
         }
 
         public void AddDialogLine(DialogLine dialogLine)
@@ -39,22 +32,10 @@ namespace Assets._SCRIPTS.Story
             _dialogs.Enqueue(dialogChoice);
         }*/
 
-        void Update()
+        public void Display()
         {
-            if (Input.GetKeyDown(KeyCode.KeypadEnter))
-            {
-                _activeDialog = _dialogs.Dequeue();
-                _activeDialog.Display(_canvas, new Vector2(0, x));
-                x += 20;
-            }
-            else if (Input.GetKeyDown(KeyCode.UpArrow))
-            {
-
-            }
-            else if (Input.GetKeyDown(KeyCode.DownArrow))
-            {
-
-            }
+            _activeDialog = _dialogs.Dequeue();
+            _activeDialog.Display(_textPanel, new Vector2(0, x));
         }
     }
 }
