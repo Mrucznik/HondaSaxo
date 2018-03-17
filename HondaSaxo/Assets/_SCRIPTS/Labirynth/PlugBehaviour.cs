@@ -19,7 +19,7 @@ public class PlugBehaviour : MonoBehaviour
             gameObject.transform.position = transform.position;
             CircleCollider2D col = gameObject.AddComponent<CircleCollider2D>();
             col.enabled = false;
-            coroutine = enableCollider(col);
+            var coroutine = enableCollider(col);
             StartCoroutine(coroutine);
             col.radius = 0.06f;
             gameObject.transform.tag = "Player";
