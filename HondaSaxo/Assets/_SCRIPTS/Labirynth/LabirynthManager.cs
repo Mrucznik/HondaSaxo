@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class LabirynthManager : MonoBehaviour
 {
@@ -16,17 +14,20 @@ public class LabirynthManager : MonoBehaviour
 
     void Update()
     {
-        if (lifes == 0)
-        {
-            Debug.Log("Dieded!");
-        }
+        
     }
 
     public void loseLife()
     {
         lifes--;
         Destroy(player);
-
-        player = Instantiate(playerPrefab, GameObject.Find("Spawn Point").transform);
+        if (lifes > 0)
+        {
+            player = Instantiate(playerPrefab, GameObject.Find("Spawn Point").transform);
+        }
+        else if (lifes <= 0)
+        {
+            Debug.Log("Dieded!");
+        }
     }
 }

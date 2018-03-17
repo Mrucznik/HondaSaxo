@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ObstacleBehaviour : MonoBehaviour {
 
@@ -13,4 +11,9 @@ public class ObstacleBehaviour : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    void setSprite(Texture2D texture2D)
+    {
+        GetComponent<Sprite>().texture =  texture2D;
+    }
 }
