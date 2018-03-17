@@ -29,6 +29,8 @@ namespace Assets._SCRIPTS.Story
             newTextComp.color = Color.black;
             newTextComp.fontSize = 16;
             newTextComp.transform.position = position;
+
+            Debug.Log("No jest cos");
         }
     }
 }
