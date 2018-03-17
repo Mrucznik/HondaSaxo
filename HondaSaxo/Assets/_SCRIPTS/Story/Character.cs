@@ -6,22 +6,14 @@ using UnityEngine;
 
 namespace Assets._SCRIPTS.Story
 {
-    public class Character
+    public class Character : MonoBehaviour
     {
         public Character()
         {
             
         }
 
-        void OnCollisionEnter(Collision collision)
-        {
-            if (collision.transform.tag == "Player")
-            {
-
-            }
-        }
-
-        public void WyswietlMorde()
+        public void WyswietlMorde(GameObject panel)
         {
 
         }

@@ -7,21 +7,44 @@ namespace Assets._SCRIPTS.Story
 {
     public class Quest
     {
-        private List<DialogSequence> _dialogSequences;
+        private readonly Quest _nextQuest;
+        private readonly DialogSequence _beginningSequence;
+        private readonly DialogSequence _endingSequence;
+        private readonly Dictionary<Character, DialogSequence> _dialogSequences;
 
-        public Quest()
+        private DialogSequence _activeDialogSequence;
+
+        public Quest(DialogSequence beginningSequence, DialogSequence endingSequence, Quest nextQuest)
         {
-            _dialogSequences = new List<DialogSequence>();
+            this._nextQuest = nextQuest;
+            this._beginningSequence = beginningSequence;
+            this._endingSequence = endingSequence;
+
+            _dialogSequences = new Dictionary<Character, DialogSequence>();
         }
 
-        public void AddDialogSequence(DialogSequence dialog)
+        public void AddDialogSequence(Character c, DialogSequence dialog)
         {
-            _dialogSequences.Add(dialog);
+            _dialogSequences.Add(c, dialog);
         }
 
-        public bool DisplayNextSequence()
+        public void StartCharacterSequence(Character c)
         {
-            return _dialogSequences[0].Display();
+            _activeDialogSequence = _dialogSequences[c];
+            _activeDialogSequence.StartDialog();
+        }
+
+        public void BeginQuest()
+        {
+            _activeDialogSequence = _beginningSequence;
+            _beginningSequence.StartDialog();
+        }
+
+        public Quest EndQuest()
+        {
+            _activeDialogSequence = _endingSequence;
+            _endingSequence.StartDialog();
+            return _nextQuest;
         }
     }
 }
