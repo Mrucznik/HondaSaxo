@@ -48,7 +48,7 @@ namespace Assets._SCRIPTS.Story
                             new DialogLine("W takich czasach przyszło mi żyć. Mi, Elektrijowi, wybitnemu elektrykowi i weteranowi bitwy pod Pudingradem. ", _elektrij,
                                 new DialogLine("Nie pozostanę bierny i nie pozwolę moim towarzyszom ginąć.", _elektrij,
                                     new DialogLine("Słyszałem o wielu awariach w mieście, trzeba coś z tym zrobić, zanim zginą niewinni ludzie. ", _elektrij,
-                                        new DialogLine("** Elektrij zakłada swoją czapkę i wychodzi **", _elektrij, null
+                                        new DialogLine("** Elektrij zakłada swoją czapkę i wychodzi z domu **", _elektrij, null
                                         )
                                     )
                                 )
