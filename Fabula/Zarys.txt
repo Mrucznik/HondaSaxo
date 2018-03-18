@@ -1,0 +1,45 @@
+--- Opis fabuły/gry
+Elektrij - Weteran bitwy pod Pudingradem, uhonorowany najwyższymi odznaczeniami mateczki Rosji. Wybitny elektryk, niestety, przez niestabilność polityczną i działania wojenne, zmuszony do życia w cieniu. Elektrij ma szanse na stworzenie nowej, lepszej Rosji, lecz to od gracza zależy, którą scieżką podąży. Kraj jest pogrążony w wojnie domowej, gdzie frakcja pudinistów i rewolucjonistów toczą otwarty konflikt. Czeka nas przygoda pełna trudnych decyzji i SZOKUJĄCYCH zwrotów akcji. Naszym celem w grze będzie uratowanie jak największej liczby towarzyszy i właściwe poprowadzenie dialogów i akcji w świecie. Jednakże strzeż się, w kraju pogrążonym wojną domową znajdą się także wrogowie ludu, którzy będą oszukiwać oraz wodzić cię za nos jak tylko się da, by przeszkodzić Ci w Twoim chwalebnym celu.
+
+--- Wstęp do gry
+Cutscenka z ciemnym tłem i "wystukiwanym" textem
+
+Gopnik - 2137, Rosja. 14 Wrzesień,
+Miasto pogrążone w wojnie domowej. Tysiące ludzi w potrzebie. Brakuje podstawowych towarów: chleba, cukru, wódki. Na ulicach ścierają się wrogie sobie frakcje. Ludzie boją się wychodzić z domów.
+W takich czasach przyszło mi żyć. Mi, Elektrijowi, wybitnemu elektrykowi i weteranowi bitwy pod Putingradem (2118). 
+Nie pozostanę bierny i nie pozwolę moim towarzyszom ginąć.
+Słyszałem o wielu awariach w mieście, trzeba coś z tym zrobić, zanim zginą niewinni ludzie. 
+** Elektrij zakłada swoją czapkę i wychodzi **
+
+--- Questy - wstępy do questów
+1. Szpital lub więzienie
+- wstęp jest wstępem do gry
+
+2. Farma/magazyn
+Gopnik - 2137, Rosja. 17 Wrzesień.
+Farma w potrzebie. Rewolucjoniści szykują atak wykorzystując awarię sieci energetycznej zasilającej systemy zabezpieczające.
+W magazynie padło zasilanie, kewstią czasu jest kiedy zaczną się w nim psuć.
+Po otrzymaniu depeszy od miejscowej władzy Elektrij rusza zaradzić awariom.
+
+3. Reaktor/Kopalnia
+Gopnik - 2137, Rosja. 21 Wrzesień.
+W reaktorze problemy z chłodzeniem.
+W kopalni zawalił się szyb. 
+Nie ma czasu na zwłoki, wyruszasz parostatkiem w piękny rejs.
+
+--- Opis postaci pobocznych:
+Borys - Stary pijak i bimbrownik. Główny dostawca samogonu obozowi rewolucjonistów. (Kopalnia) [rewolucjonista]
+Dimitrij - Twój dobry przyjaciel. Zawsze służy dobrą radą. (Magazyn) [neutralny]
+Wania - Milczek, nie mówi więcej niż musi. (Elektrownia) [rewolucjonista]
+Elena - Matka randoma w pierdlu. (Dom) [neutralna]
+Igor - Pracownik kopalni, silny ale głupi. Wierny Carowi. [carat]
+Iwan - Kocony w wojsku, nie lubi armii. Dobry farmer, ale leniwy. (Farma) [rewolucjonista]
+Nikolai - Były pracownik elektrownii. Konserwatysta. (Elektrownia) [carat]
+Nina - Lekkich obyczajów, nimfomanka, bałamuci pacjentów. (Szpital) [neutralna]
+Sasza - Strażnik więzienny. Okrutnik, materialista. Łapówkarz. (Więzienie) [carat]
+Sergiej - Cwaniak, kombinator, oportunista. (Więzienie) [neutralna]
+Tamara - Pięlęgniarka, kradnie spirytus z zasobu szpitala. (Szpital) [rewolucjonista]
+Tatiana - Żona właściciela farmy. Twarda sztuka. (Farma) [carat]
+
+Natasza - NULL
+Aleksiej - NULL
