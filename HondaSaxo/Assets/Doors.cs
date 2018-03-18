@@ -16,12 +16,8 @@ public class Doors : MonoBehaviour
 	    DS = new DialogSequence(new DialogChoice("Czy napewno chcesz wejść do " + name, new Character("Door", false), "Tak", new DoorDialog(sceneID), "Nie", null));
 	}
 
-    void OnTriggerStay2D(Collider2D col)
+    void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("Trigger");
-        if (Input.GetKey(KeyCode.Return))
-        {
-            DS.StartDialog();
-        }
+        DS.StartDialog();
     }
 }

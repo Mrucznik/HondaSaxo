@@ -9,7 +9,7 @@ public class LabirynthManager : MonoBehaviour
     private Vector2 spawnPoint;
     void Start()
     {
-        player = Instantiate(playerPrefab, GameObject.Find("Spawn Point").transform);
+        StartCoroutine(newPlayer()); 
     }
 
 
