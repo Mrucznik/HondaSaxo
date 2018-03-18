@@ -10,7 +10,7 @@ namespace Assets._SCRIPTS.Story
         private readonly Character _dimitrij;
         private readonly Character _elena;
         private readonly Character _igor;
-        private readonly Character _iwan;
+        private readonly Character _ivan;
         private readonly Character _natasza;
         private readonly Character _nikolai;
         private readonly Character _nina;
@@ -28,7 +28,7 @@ namespace Assets._SCRIPTS.Story
             _dimitrij = new Character("Dimitrij", false);
             _elena = new Character("Elena", false);
             _igor = new Character("Igor", false);
-            _iwan = new Character("Iwan", false);
+            _ivan = new Character("Ivan", false);
             _natasza = new Character("Natasza", false);
             _nikolai = new Character("Nikolai", false);
             _nina = new Character("Nina", false);
@@ -127,6 +127,82 @@ namespace Assets._SCRIPTS.Story
                     )
                 )
             );
+
+            //Igor
+            q.AddDialogSequence("Igor", new DialogSequence(new DialogLine("Igor nie mieć czasu, Igor kopać węgiel.", _igor, null)));
+
+            //Ivan
+            q.AddDialogSequence("Ivan", new DialogSequence(new DialogLine("Nie zawracaj mi głowy!", _ivan, null)));
+            
+            //Ivan
+            q.AddDialogSequence("Nikolai", new DialogSequence(
+                new DialogLine("Chwała Carowi! Co Cię Tu sprowadza Elektrij?!", _nikolai, 
+                    new DialogLine("Witaj, Nikolai. Czy wiesz coś o awariach w szpitalu i więzieniu.", _elektrij,
+                        new DialogLine("Tak. Słyszałem, że spora część więźniów, która leży w więziennym szpitalu umrze, jeżeli ktoś szybko nie naprawi agregatu prądotwórczego.", _nikolai,
+                            new DialogLine("Czy wiesz gdzie go znajdę?", _elektrij,
+                                new DialogLine("Niestety nie, ale spytaj Saszy, on tam pracuje.", _nikolai,
+                                    new DialogLine("Dzięki, bywaj.", _elektrij, null)
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+            );
+
+            //Nina
+            q.AddDialogSequence("Nina", new DialogSequence(new DialogLine("Hej, przystojniaku.", _nina, null)));
+
+            //Sasza
+            q.AddDialogSequence("Sasza", new DialogSequence(
+                new DialogLine("Witaj, Sasza. Słyszałem, że jest problem z zasilaniem w więzieniu.", _elektrij, 
+                    new DialogLine("Witaj, Elektrij. Tak, mamy awarię i te szumowiny uciekną i zaczną znowu zabijać, jeżeli nie naprawisz bramy.", _sasza,
+                        new DialogChoice("Odpowiedź", _elektrij,
+                            "Czy wiesz gdzie jest zepsuty agregat prądotwórczy zasilający skrzydło szpitalne?", 
+                                new DialogLine("Co? Chcesz ratować tych kryminalistów!? W takim razie lepiej nie rób nic, z chęcią ich powystrzelam jak będą próbowali uciekać.", _sasza, null),
+                            "Gdzie znajdę okablowanie związane z usterką bramy?", 
+                                new DialogLine("Znajdziesz ją jeżeli pójdziesz drogą na lewo od wejścia. Pośpiesz się, bo te szumowiny uciekną i będę musiał zająć się nimi osobiście.", _sasza, null)
+                            )
+                        )
+                    )
+                )
+            );
+
+            //Sergiej
+            q.AddDialogSequence("Sergiej", new DialogSequence(
+                new DialogLine("Słuchaj, nie chcesz może zarobić? W więzieniu znajduje się mój... partner biznesowy, a brak zasilania w więzieniu sprawi mi dobrą okazję do odnowienia z nim kontaktu. ", _sergiej, 
+                    new DialogLine("Zamiast naprawiać całe zasilanie, idź uruchomić agregat prądotwórczy w sektorze szpitalnym, droga na wprost gdy wejdziesz do środka. Odwdzięczę się, gdy już będzie po wszystkim. Co ty na to?", _sergiej,
+                        new DialogChoice("Odpowiedź", _elektrij,
+                            "Co dostanę w zamian?", 
+                                new DialogLine("Mogę zaoferować Ci pieniądzę lub przysługę. W każdym razie na pewno się nie zawiedziesz, jeśli mi pomożesz.", _sasza,
+                                    new DialogChoice("Odpowiedź", _elektrij,
+                                        "Zatem niech tak będzie, dług odbiorę po udanej akcji.", 
+                                            new DialogLine("Interesy z Tobą to przyjemność.", _sasza, null),
+                                        "Zapomnij, szelmo.", 
+                                            new DialogLine("Jak chcesz, nie wiesz, co tracisz.", _sasza, null)
+                                        )
+                                    ),
+                            "Zapomnij, szelmo.", 
+                                new DialogLine("Jak chcesz, nie wiesz, co tracisz.", _sasza, null))
+                        )
+                    )
+                )
+            );
+
+            //Tamara
+            q.AddDialogSequence("Tamara", new DialogSequence(
+                new DialogLine("Elektrij, szybko, trzeba włączyć sekcję zasilania w inkubatorach!", _tamara, 
+                    new DialogLine("Spokojnie, słyszałem już o problemach w szpitalu. Gdzie znajdę sekcję zasilającą?", _elektrij,
+                        new DialogLine("Jest na końcu prawego korytarza, musisz minąć wszystkie sale szpitalne.", _tamara,
+                            new DialogLine("Dzięki, śpieszę to naprawić.", _elektrij, null)
+                            )
+                        )
+                    )
+                )
+            );
+
+            //Tatiana
+            q.AddDialogSequence("Tatiana", new DialogSequence(new DialogLine("Nie mam teraz czasu, muszę pomóc mężowi zarządzać farmą. Wybacz, Elektrij.", _tatiana, null)));
 
             return q;
         }

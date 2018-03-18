@@ -44,7 +44,7 @@ namespace Assets._SCRIPTS.Story
                 case "Igor":
                     this.gameObject.GetComponent<Image>().sprite = Igor;
                     break;
-                case "Iwan":
+                case "Ivan":
                     this.gameObject.GetComponent<Image>().sprite = Iwan;
                     break;
                 case "Natasza":

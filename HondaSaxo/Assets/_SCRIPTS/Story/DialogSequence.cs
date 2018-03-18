@@ -16,6 +16,11 @@ namespace Assets._SCRIPTS.Story
 
         public void StartDialog()
         {
+            if (_activeDialog == null)
+            {
+                Debug.Log("Wystartowano podwójnie dialog.");
+                return;
+            }
             ClearTextPanels();
             _startDialog.Display();
             _activeDialog = _startDialog;
