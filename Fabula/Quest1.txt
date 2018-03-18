@@ -14,9 +14,13 @@
 -E-3. --
 
 2. Dimitrij 
--D- Witaj barcie! Co cię sprowadza.
+-D- Witaj barcie! Słyszazłeś co się stało?
 
--E- Słyszałem o awarii zasilania w szpitalu i więzieniu. Czy wiesz może, co sie tam stało?
+-E- Tak, słyszałem o awarii zasilania w szpitalu i więzieniu. Czy wiesz może, co sie tam stało?
+
+-D- Tak, powinieneś się tam jak najszybciej udać. Zasilanie inkubatorów uległo awarii. Okablowanie jest w największym pokoju z łóżkami. Śpiesz się, trzeba uratować te dzieci!
+
+-E- Dziękuje, przyjacielu!
 
 
 3. Wania

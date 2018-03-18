@@ -7,6 +7,8 @@ namespace Assets._SCRIPTS.Story
 {
     public class Quest
     {
+        private static int questCount = 0;
+        public int QuestID { get; private set; }
         private readonly Quest _nextQuest;
         private readonly DialogSequence _beginningSequence;
         private readonly DialogSequence _endingSequence;
@@ -21,6 +23,8 @@ namespace Assets._SCRIPTS.Story
             this._endingSequence = endingSequence;
 
             _dialogSequences = new Dictionary<string, DialogSequence>();
+
+            QuestID = questCount++;
         }
 
         public void AddDialogSequence(string c, DialogSequence dialog)
