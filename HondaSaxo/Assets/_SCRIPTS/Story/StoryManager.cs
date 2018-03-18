@@ -11,6 +11,7 @@ public class StoryManager : MonoBehaviour
     public Quest ActiveQuest;
 
     public GameObject JegoMordaPanel;
+    public GameObject JegoMordaText;
     public GameObject MojaMordaPanel;
     public GameObject TextPanel;
     public Canvas Canvas;
@@ -66,13 +67,6 @@ public class StoryManager : MonoBehaviour
                 {
                     keyDownEvent();
                 }
-            }
-        }
-        else
-        {
-            if (Input.GetKeyDown(KeyCode.Return))
-            {
-                ActiveQuest.BeginQuest();
             }
         }
     }

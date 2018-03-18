@@ -23,13 +23,16 @@ namespace Assets._SCRIPTS.Story
         {
             if (_mojaMorda)
             {
+                StoryManager.GetInstance().JegoMordaText.SetActive(false);
                 StoryManager.GetInstance().JegoMordaPanel.SetActive(false);
                 StoryManager.GetInstance().MojaMordaPanel.SetActive(true);
             }
             else
             {
                 StoryManager.GetInstance().JegoMordaPanel.GetComponent<AvatarDisplayer>().Display(_name);
+                StoryManager.GetInstance().JegoMordaText.GetComponent<Text>().text = _name;
                 StoryManager.GetInstance().MojaMordaPanel.SetActive(false);
+                StoryManager.GetInstance().JegoMordaText.SetActive(true);
                 StoryManager.GetInstance().JegoMordaPanel.SetActive(true);
             }
         }

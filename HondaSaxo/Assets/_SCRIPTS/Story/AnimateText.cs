@@ -11,7 +11,9 @@ public class AnimateText : MonoBehaviour
     public static AnimateText _instance;
     
     private string _text;
-    private Coroutine _currentCoroutine, _lastCoroutine = null;
+    private Text _obj;
+    private Coroutine _currentCoroutine;
+    private bool finished = true;
     private AnimateText()
     {
     }
@@ -23,18 +25,24 @@ public class AnimateText : MonoBehaviour
 
     public void Display(Text obj, string text)
     {
-        _lastCoroutine = _currentCoroutine;
+        if (_currentCoroutine != null)
+        {
+            StopCoroutine(_currentCoroutine);
+        }
+
         _currentCoroutine = StartCoroutine(Animate(obj, text));
         _text = text;
+        _obj = obj;
     }
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.Return) && _lastCoroutine != null)
-        {
-            StopCoroutine(_lastCoroutine);
-            Debug.Log("Stopuje lastCoroutine " + _lastCoroutine);
-        }
+        //if (Input.GetKey(KeyCode.Space))
+        //{
+        //    StopCoroutine(_currentCoroutine);
+
+        //    _obj.text = _text;
+        //}
     }
 
     IEnumerator Animate(Text obj, string strComplete)
@@ -45,6 +53,8 @@ public class AnimateText : MonoBehaviour
             obj.text += strComplete[i++];
             yield return new WaitForSeconds(0.05F);
         }
+
+        finished = true;
     }
 
     public static AnimateText GetInstance()

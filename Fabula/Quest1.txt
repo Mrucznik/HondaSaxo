@@ -42,7 +42,7 @@
 5. Igor
 -I- Igor nie mieć czasu, Igor kopać węgiel.
 
-6. Iwan
+6. Ivan
 -I- Nie zawracaj mi głowy!
 
 7. Nikolai
@@ -91,9 +91,9 @@
 
 11. Tamara
 -T- Elektrij, szybko, trzeba włączyć sekcję zasilania w inkubatorach!
--S- Spokojnie, słyszałem już o problemach w szpitalu. Gdzie znajdę sekcję zasilającą?
+-E- Spokojnie, słyszałem już o problemach w szpitalu. Gdzie znajdę sekcję zasilającą?
 -T- Jest na końcu prawego korytarza, musisz minąć wszystkie sale szpitalne.
--S- Dzięki, śpieszę to naprawić.
+-E- Dzięki, śpieszę to naprawić.
 
 12. Tatiana
 -T- Nie mam teraz czasu, muszę pomóc mężowi zarządzać farmą. Wybacz, Elektrij.

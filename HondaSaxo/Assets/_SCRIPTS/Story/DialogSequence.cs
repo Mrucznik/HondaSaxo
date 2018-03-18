@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-
 namespace Assets._SCRIPTS.Story
 {
     public class DialogSequence
@@ -21,6 +16,11 @@ namespace Assets._SCRIPTS.Story
 
         public void StartDialog()
         {
+            if (_activeDialog != null)
+            {
+                Debug.Log("Wystartowano podwójnie dialog.");
+                return;
+            }
             ClearTextPanels();
             _startDialog.Display();
             _activeDialog = _startDialog;

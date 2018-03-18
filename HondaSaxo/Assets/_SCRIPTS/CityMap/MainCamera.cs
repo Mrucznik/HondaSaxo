@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-//using Vuforia;
+﻿using UnityEngine;
 
 public class MainCamera : MonoBehaviour {
 
@@ -18,7 +15,7 @@ public class MainCamera : MonoBehaviour {
 
         if (Vector2.Distance(player.transform.position, transform.position) > 4)
         {
-            Debug.Log(Vector2.Distance(player.transform.position, transform.position));
+            //Debug.Log(Vector2.Distance(player.transform.position, transform.position));
             transform.position = Vector2.Lerp(transform.position, player.transform.position, Time.deltaTime);
             transform.position = new Vector3(transform.position.x, transform.position.y, -10);
         }
