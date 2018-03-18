@@ -39,39 +39,27 @@ namespace Assets._SCRIPTS.Story
             _wania = new Character("Wania", false);
         }
 
-        private Quest GetTestQuest(Quest nextQuest)
-        {
-            DialogLine startLine =
-                new DialogLine("- Czesc Dimitrii", _elektrij,
-                    new DialogLine("- Spierdalaj", _aleksiej,
-                        new DialogChoice("Co chcesz zrobic Dimitriemu", _elektrij,
-                            "Zajebac lepe", new DialogLine("* Lepa odjebala Dimitriiowi glowe! *", _aleksiej, null),
-                            "Zasadzic luja z calej epy", new DialogLine("- O zesz Ty kurwa!", _aleksiej, null),
-                            "Wyjebac z dyni", new DialogLine("* Dimitrii implodowal *", _aleksiej, null)
-                        )
-                    )
-                );
-
-            DialogLine endLine =
-                new DialogLine("No i dobrze, ze z dech", _elektrij,
-                    new DialogLine("No raczej kurwa nie inaczej", _aleksiej,
-                        new DialogLine("No i kurwa pierwszorzednie mordo, elo", _elektrij, null)));
-
-            DialogSequence beginningSequence = new DialogSequence(startLine);
-            DialogSequence endingSequence = new DialogSequence(endLine);
-
-            Quest q = new Quest(beginningSequence, endingSequence, nextQuest);
-            q.AddDialogSequence("Elena", new DialogSequence(new DialogLine("* Dimitrii implodowal *", _elena, null)));
-            return q;
-        }
-
         private Quest GetQuest1(Quest nextQuest)
         {
-            DialogLine startLine = null;
-            DialogLine endLine = null;
-
-            DialogSequence beginningSequence = new DialogSequence(startLine);
-            DialogSequence endingSequence = new DialogSequence(endLine);
+            DialogSequence beginningSequence = new DialogSequence(
+                new DialogLine("Gopnik - 2137, Rosja. 14 Wrzesień", _elektrij,
+                    new DialogLine("Miasto pogrążone w wojnie domowej. Tysiące ludzi w potrzebie. Brakuje podstawowych towarów: chleba, cukru, wódki. Na ulicach ścierają się wrogie sobie frakcje. Ludzie boją się wychodzić z domów.", _elektrij,
+                        new DialogLine("W radiu nadano komunikat o awarii zasilaniu w szpitalu oraz więzieniu.", _elektrij,
+                            new DialogLine("W takich czasach przyszło mi żyć. Mi, Elektrijowi, wybitnemu elektrykowi i weteranowi bitwy pod Pudingradem. ", _elektrij,
+                                new DialogLine("Nie pozostanę bierny i nie pozwolę moim towarzyszom ginąć.", _elektrij,
+                                    new DialogLine("Słyszałem o wielu awariach w mieście, trzeba coś z tym zrobić, zanim zginą niewinni ludzie. ", _elektrij,
+                                        new DialogLine("** Elektrij zakłada swoją czapkę i wychodzi **", _elektrij, null
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+            );
+            DialogSequence endingSequence = new DialogSequence(
+                new DialogLine("Koniec questu!", _elektrij, null)
+            );
 
             Quest q = new Quest(beginningSequence, endingSequence, nextQuest);
             
@@ -133,8 +121,8 @@ namespace Assets._SCRIPTS.Story
 
             //Ivan
             q.AddDialogSequence("Ivan", new DialogSequence(new DialogLine("Nie zawracaj mi głowy!", _ivan, null)));
-            
-            //Ivan
+
+            //Nikolai
             q.AddDialogSequence("Nikolai", new DialogSequence(
                 new DialogLine("Chwała Carowi! Co Cię Tu sprowadza Elektrij?!", _nikolai, 
                     new DialogLine("Witaj, Nikolai. Czy wiesz coś o awariach w szpitalu i więzieniu.", _elektrij,
