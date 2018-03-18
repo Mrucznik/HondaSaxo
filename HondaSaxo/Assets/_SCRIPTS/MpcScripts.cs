@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MpcScripts : MonoBehaviour {
-    public string name;
+    public string Name;
    
 
 	// Use this for initialization
@@ -18,6 +18,6 @@ public class MpcScripts : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        StoryManager.GetInstance().ActiveQuest.StartCharacterSequence(name);
+        StoryManager.GetInstance().ActiveQuest.StartCharacterSequence(Name);
     }
 }
