@@ -9309,74 +9309,40 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4130149531591066, guid: 69afe6cf78de80c45a9a7b6046fef4d4, type: 2}
+    - target: {fileID: 4960249522940672, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -44.98
+      value: 66.46
       objectReference: {fileID: 0}
-    - target: {fileID: 4130149531591066, guid: 69afe6cf78de80c45a9a7b6046fef4d4, type: 2}
+    - target: {fileID: 4960249522940672, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -36.05
+      value: -52.75
       objectReference: {fileID: 0}
-    - target: {fileID: 4130149531591066, guid: 69afe6cf78de80c45a9a7b6046fef4d4, type: 2}
+    - target: {fileID: 4960249522940672, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0.8044894
       objectReference: {fileID: 0}
-    - target: {fileID: 4130149531591066, guid: 69afe6cf78de80c45a9a7b6046fef4d4, type: 2}
+    - target: {fileID: 4960249522940672, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4130149531591066, guid: 69afe6cf78de80c45a9a7b6046fef4d4, type: 2}
+    - target: {fileID: 4960249522940672, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4130149531591066, guid: 69afe6cf78de80c45a9a7b6046fef4d4, type: 2}
+    - target: {fileID: 4960249522940672, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4130149531591066, guid: 69afe6cf78de80c45a9a7b6046fef4d4, type: 2}
+    - target: {fileID: 4960249522940672, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4130149531591066, guid: 69afe6cf78de80c45a9a7b6046fef4d4, type: 2}
+    - target: {fileID: 4960249522940672, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1006155014695140, guid: 69afe6cf78de80c45a9a7b6046fef4d4, type: 2}
-      propertyPath: m_Name
-      value: LabirynthEntry
-      objectReference: {fileID: 0}
-    - target: {fileID: 212612142206378082, guid: 69afe6cf78de80c45a9a7b6046fef4d4,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 212612142206378082, guid: 69afe6cf78de80c45a9a7b6046fef4d4,
-        type: 2}
-      propertyPath: m_WasSpriteAssigned
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 61814222297839686, guid: 69afe6cf78de80c45a9a7b6046fef4d4,
-        type: 2}
-      propertyPath: m_Offset.y
-      value: -0.13051796
-      objectReference: {fileID: 0}
-    - target: {fileID: 61814222297839686, guid: 69afe6cf78de80c45a9a7b6046fef4d4,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 2.261036
-      objectReference: {fileID: 0}
-    - target: {fileID: 61814222297839686, guid: 69afe6cf78de80c45a9a7b6046fef4d4,
-        type: 2}
-      propertyPath: m_Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 61814222297839686, guid: 69afe6cf78de80c45a9a7b6046fef4d4,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 1.6960907
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 69afe6cf78de80c45a9a7b6046fef4d4, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &507385237
 Prefab:
@@ -9471,24 +9437,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Nikolai
---- !u!1 &628867798 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1006155014695140, guid: 69afe6cf78de80c45a9a7b6046fef4d4,
-    type: 2}
-  m_PrefabInternal: {fileID: 493342450}
---- !u!114 &628867803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 628867798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc648fe566898514bbec99f8893b4b35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: magazynu
-  sceneID: 5
 --- !u!1001 &703786624
 Prefab:
   m_ObjectHideFlags: 0
@@ -9717,7 +9665,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.3647059, g: 0.36078432, b: 0.45098042, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -9737,11 +9685,11 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
+  m_HDR: 0
+  m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
+  m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
 --- !u!4 &795131135
@@ -9751,7 +9699,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 795131131}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -37.5, y: -38.9, z: -10}
+  m_LocalPosition: {x: -0.07, y: 1.76, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -10306,7 +10254,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1528238635}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.01, y: -28.53, z: 0.8044894}
+  m_LocalPosition: {x: -0.03, y: 1.74, z: 0.8044894}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -10399,7 +10347,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.06864834}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -10410,7 +10358,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.2949562, y: 2.9173985}
+  m_Size: {x: 2.0913987, y: 2.7801018}
   m_EdgeRadius: 0
 --- !u!1001 &1593715291
 Prefab:

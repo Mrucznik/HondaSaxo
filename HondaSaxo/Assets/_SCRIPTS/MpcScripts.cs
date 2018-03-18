@@ -7,10 +7,8 @@ public class MpcScripts : MonoBehaviour {
 
     private bool collisionOccured = false;
 
-	void OnTriggerStay2D (Collider2D col)
+	void OnTriggerEnter2D (Collider2D col)
 	{
-        Debug.Log("Trigger");
-        if(Input.GetKey(KeyCode.Return))
 	    StoryManager.GetInstance().ActiveQuest.StartCharacterSequence(Name);
     }
 }

@@ -18,11 +18,12 @@ namespace Assets._SCRIPTS.Story
 
         public void Display()
         {
-            SceneManager.LoadScene(sceneID);
         }
 
         public IDialog GetNextDialog()
         {
+            StoryManager.GetInstance().Active = false;
+            SceneManager.LoadScene(sceneID);
             return null;
         }
     }
