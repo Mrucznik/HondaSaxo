@@ -25,6 +25,7 @@ namespace Assets._SCRIPTS.Story
             _startDialog.Display();
             _activeDialog = _startDialog;
 
+            GameObject.Find("Elektrij").GetComponent<CityMapBehaviour>().paused = true;
             StoryManager.GetInstance().Active = true;
             StoryManager.GetInstance().KeyEnterEvents.Add(OnKeyEnter);
             StoryManager.GetInstance().KeyUpEvents.Add(OnKeyUp);
@@ -33,6 +34,7 @@ namespace Assets._SCRIPTS.Story
 
         private void StopDialog()
         {
+            GameObject.Find("Elektrij").GetComponent<CityMapBehaviour>().paused = false;
             StoryManager.GetInstance().Active = false;
             StoryManager.GetInstance().KeyEnterEvents.Remove(OnKeyEnter);
             StoryManager.GetInstance().KeyUpEvents.Remove(OnKeyUp);
