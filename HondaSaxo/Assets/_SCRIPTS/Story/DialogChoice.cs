@@ -46,10 +46,10 @@ namespace Assets._SCRIPTS.Story
 
         public void Display()
         {
-            StoryManager.GetInstance().Text.text = _title;
+            AnimateText.GetInstance().Display(StoryManager.GetInstance().Text, _title);
             for (int i = 0; i < _choices.Length; i++)
             {
-                StoryManager.GetInstance().OptionText[i].text = "- " + _choices[i];
+                StoryManager.GetInstance().OptionText[i].text += "- " + _choices[i];
             }
             HighlightActiveOption();
             _character.WyswietlMorde();

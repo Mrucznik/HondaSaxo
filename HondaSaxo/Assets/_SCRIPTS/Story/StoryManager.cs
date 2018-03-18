@@ -70,7 +70,7 @@ public class StoryManager : MonoBehaviour
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.KeypadEnter))
+            if (Input.GetKeyDown(KeyCode.Return))
             {
                 ActiveQuest.BeginQuest();
             }
