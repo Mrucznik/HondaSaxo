@@ -9,5 +9,23 @@ EditorBuildSettings:
     path: Assets/_SCENES/Menu.unity
     guid: 9381ba122ecd3c845b9a6b8ac6f91979
   - enabled: 1
-    path: Assets/_SCENES/Labirynt.unity
+    path: Assets/_SCENES/City.unity
     guid: f0acf0ea10c016c468fe83c987a8d69a
+  - enabled: 1
+    path: Assets/_SCENES/Labirynty/LabiryntSzpital.unity
+    guid: f93c1c6e17eb9e148bebf1abf578f408
+  - enabled: 1
+    path: Assets/_SCENES/Labirynty/LabiryntWiezienie.unity
+    guid: 1f90aa94513a9c34a8f15d19bb7db4d1
+  - enabled: 1
+    path: Assets/_SCENES/Labirynty/LabiryntFarma.unity
+    guid: 13ef88701504e544cb63a53dd15d2f11
+  - enabled: 1
+    path: Assets/_SCENES/Labirynty/LabiryntMagazyn.unity
+    guid: aa7719b9b338dea439d49d1252484630
+  - enabled: 1
+    path: Assets/_SCENES/Labirynty/LabiryntReaktor.unity
+    guid: 3e1254e6ec3ecf6409449ea6740b192f
+  - enabled: 1
+    path: Assets/_SCENES/Labirynty/LabiryntKopalnia.unity
+    guid: 1ff750cf609a6f24382ecb22019aff6f
