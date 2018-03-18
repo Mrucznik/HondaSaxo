@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class LabirynthManager : MonoBehaviour
 {
@@ -21,13 +22,20 @@ public class LabirynthManager : MonoBehaviour
     {
         lifes--;
         Destroy(player);
-        if (lifes > 0)
+        if (lifes >= 0)
         {
-            player = Instantiate(playerPrefab, GameObject.Find("Spawn Point").transform);
+            StartCoroutine(newPlayer());
         }
-        else if (lifes <= 0)
+        else if (lifes < 0)
         {
-            Debug.Log("Dieded!");
+            Debug.Log("No more lifes!");
         }
+    }
+
+    IEnumerator newPlayer()
+    {
+        yield return new WaitForSeconds(2f);
+        Destroy(player);
+        player = Instantiate(playerPrefab, GameObject.Find("Spawn Point").transform);
     }
 }
