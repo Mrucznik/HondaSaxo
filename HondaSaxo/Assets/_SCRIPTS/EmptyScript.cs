@@ -13,4 +13,11 @@ public class EmptyScript : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    void OnTriggerEnter2D(Collider2D lol)
+    {
+        Debug.Log("chuj");
+        StoryManager.GetInstance().ActiveQuest.BeginQuest();
+        Destroy(this);
+    }
 }
