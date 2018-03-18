@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
@@ -44,11 +45,17 @@ namespace Assets._SCRIPTS.Story
             _beginningSequence.StartDialog();
         }
 
-        public Quest EndQuest()
+        public Quest EndQuest(int endNumber)
         {
             _activeDialogSequence = _endingSequence;
             _endingSequence.StartDialog();
             StoryManager.GetInstance().ActiveQuest = _nextQuest;
+
+            if (endNumber == 0)
+            {
+
+            }
+
             return _nextQuest;
         }
     }
