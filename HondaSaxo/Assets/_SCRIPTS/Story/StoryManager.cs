@@ -40,7 +40,6 @@ public class StoryManager : MonoBehaviour
     {
         _instance = this;
         Active = false;
-
     }
 
     void Update()
