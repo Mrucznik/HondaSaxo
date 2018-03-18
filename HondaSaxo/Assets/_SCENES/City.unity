@@ -10632,7 +10632,7 @@ Prefab:
     - target: {fileID: 114092957609565500, guid: ab8cd3b30b8f16647a3a7f8baecea83e,
         type: 2}
       propertyPath: sceneID
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1737258233563074, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
       propertyPath: m_Name
@@ -10837,6 +10837,67 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Elena
+--- !u!1001 &1921494687
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4960249522940672, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 62.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960249522940672, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -52.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960249522940672, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.8044894
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960249522940672, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960249522940672, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960249522940672, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960249522940672, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960249522940672, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
+      propertyPath: m_RootOrder
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 114092957609565500, guid: ab8cd3b30b8f16647a3a7f8baecea83e,
+        type: 2}
+      propertyPath: name
+      value: farmy
+      objectReference: {fileID: 0}
+    - target: {fileID: 114092957609565500, guid: ab8cd3b30b8f16647a3a7f8baecea83e,
+        type: 2}
+      propertyPath: sceneID
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1737258233563074, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
+      propertyPath: m_Name
+      value: LabirynthEntry (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 61317458786516846, guid: ab8cd3b30b8f16647a3a7f8baecea83e,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 4.2731457
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &2046050432
 Prefab:
   m_ObjectHideFlags: 0
@@ -10884,7 +10945,7 @@ Prefab:
     - target: {fileID: 114092957609565500, guid: ab8cd3b30b8f16647a3a7f8baecea83e,
         type: 2}
       propertyPath: sceneID
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1737258233563074, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
       propertyPath: m_Name
