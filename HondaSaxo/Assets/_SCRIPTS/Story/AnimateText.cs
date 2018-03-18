@@ -37,12 +37,11 @@ public class AnimateText : MonoBehaviour
 
     void Update()
     {
-        //if (Input.GetKey(KeyCode.Space))
-        //{
-        //    StopCoroutine(_currentCoroutine);
-
-        //    _obj.text = _text;
-        //}
+        if (Input.GetKey(KeyCode.Space))
+        {
+            StopCoroutine(_currentCoroutine);
+            _obj.text = _text;
+        }
     }
 
     IEnumerator Animate(Text obj, string strComplete)
