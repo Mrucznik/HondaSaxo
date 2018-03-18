@@ -161,8 +161,8 @@ namespace Assets._SCRIPTS.Story
                             "Czy wiesz gdzie jest zepsuty agregat prądotwórczy zasilający skrzydło szpitalne?", 
                                 new DialogLine("Co? Chcesz ratować tych kryminalistów!? W takim razie lepiej nie rób nic, z chęcią ich powystrzelam jak będą próbowali uciekać.", _sasza, null),
                             "Gdzie znajdę okablowanie związane z usterką bramy?", 
-                                new DialogLine("Znajdziesz ją jeżeli pójdziesz drogą na lewo od wejścia. Pośpiesz się, bo te szumowiny uciekną i będę musiał zająć się nimi osobiście.", _sasza, null),
-                            "", null)
+                                new DialogLine("Znajdziesz ją jeżeli pójdziesz drogą na lewo od wejścia. Pośpiesz się, bo te szumowiny uciekną i będę musiał zająć się nimi osobiście.", _sasza, null)
+                            )
                         )
                     )
                 )
@@ -179,13 +179,11 @@ namespace Assets._SCRIPTS.Story
                                         "Zatem niech tak będzie, dług odbiorę po udanej akcji.", 
                                             new DialogLine("Interesy z Tobą to przyjemność.", _sasza, null),
                                         "Zapomnij, szelmo.", 
-                                            new DialogLine("Jak chcesz, nie wiesz, co tracisz.", _sasza, null),
-                                        "", null
-                                            )
+                                            new DialogLine("Jak chcesz, nie wiesz, co tracisz.", _sasza, null)
+                                        )
                                     ),
                             "Zapomnij, szelmo.", 
-                                new DialogLine("Jak chcesz, nie wiesz, co tracisz.", _sasza, null),
-                            "", null)
+                                new DialogLine("Jak chcesz, nie wiesz, co tracisz.", _sasza, null))
                         )
                     )
                 )
