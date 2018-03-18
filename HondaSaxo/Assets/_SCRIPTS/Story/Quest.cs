@@ -51,10 +51,7 @@ namespace Assets._SCRIPTS.Story
             _endingSequence.StartDialog();
             StoryManager.GetInstance().ActiveQuest = _nextQuest;
 
-            if (endNumber == 0)
-            {
-
-            }
+            StoryManager.GetInstance().kokoko = endNumber;
 
             return _nextQuest;
         }

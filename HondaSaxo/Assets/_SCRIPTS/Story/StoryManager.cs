@@ -23,6 +23,8 @@ public class StoryManager : MonoBehaviour
     public readonly List<Action> KeyUpEvents = new List<Action>();
     public readonly List<Action> KeyDownEvents = new List<Action>();
 
+    public int kokoko;
+
 
     public bool Active
     {

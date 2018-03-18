@@ -68,7 +68,7 @@ public class PlugBehaviour : MonoBehaviour
 
         if (collision.transform.tag == "Finish")
         {
-            StoryManager.GetInstance().ActiveQuest.EndQuest();
+            StoryManager.GetInstance().ActiveQuest.EndQuest(0);
             SceneManager.LoadScene(1);
         }
     }
