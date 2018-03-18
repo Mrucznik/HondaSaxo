@@ -492,12 +492,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1737258233563074, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
       propertyPath: m_Name
-      value: LabirynthEntry (5)
+      value: LabirynthEntryElektrownia
       objectReference: {fileID: 0}
     - target: {fileID: 61317458786516846, guid: ab8cd3b30b8f16647a3a7f8baecea83e,
         type: 2}
       propertyPath: m_Size.x
       value: 4.2731457
+      objectReference: {fileID: 0}
+    - target: {fileID: 1737258233563074, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
@@ -9410,7 +9414,15 @@ Prefab:
     - target: {fileID: 114092957609565500, guid: ab8cd3b30b8f16647a3a7f8baecea83e,
         type: 2}
       propertyPath: sceneID
-      value: 3
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1737258233563074, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
+      propertyPath: m_Name
+      value: LabirynthEntrySzpital
+      objectReference: {fileID: 0}
+    - target: {fileID: 1737258233563074, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
@@ -9758,7 +9770,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &795131131
 GameObject:
@@ -10091,7 +10103,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1737258233563074, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
       propertyPath: m_Name
-      value: LabirynthEntry (4)
+      value: LabirynthEntryKopalnia
+      objectReference: {fileID: 0}
+    - target: {fileID: 1737258233563074, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
@@ -10226,7 +10242,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4960249522940672, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
       propertyPath: m_RootOrder
-      value: 20
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 114092957609565500, guid: ab8cd3b30b8f16647a3a7f8baecea83e,
         type: 2}
@@ -10240,7 +10256,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1737258233563074, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
       propertyPath: m_Name
-      value: LabirynthEntry (3)
+      value: LabirynthEntryMagazyn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1737258233563074, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
@@ -10702,7 +10722,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1737258233563074, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
       propertyPath: m_Name
-      value: LabirynthEntry (1)
+      value: LabirynthEntryWiezienie
       objectReference: {fileID: 0}
     - target: {fileID: 61317458786516846, guid: ab8cd3b30b8f16647a3a7f8baecea83e,
         type: 2}
@@ -10940,7 +10960,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4960249522940672, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
       propertyPath: m_RootOrder
-      value: 23
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 114092957609565500, guid: ab8cd3b30b8f16647a3a7f8baecea83e,
         type: 2}
@@ -10954,78 +10974,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1737258233563074, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
       propertyPath: m_Name
-      value: LabirynthEntry (6)
+      value: LabirynthEntryFarma
       objectReference: {fileID: 0}
     - target: {fileID: 61317458786516846, guid: ab8cd3b30b8f16647a3a7f8baecea83e,
         type: 2}
       propertyPath: m_Size.x
       value: 4.2731457
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
-  m_IsPrefabParent: 0
---- !u!1001 &2046050432
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4960249522940672, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 39.98
-      objectReference: {fileID: 0}
-    - target: {fileID: 4960249522940672, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -81.77
-      objectReference: {fileID: 0}
-    - target: {fileID: 4960249522940672, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0.8044894
-      objectReference: {fileID: 0}
-    - target: {fileID: 4960249522940672, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4960249522940672, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4960249522940672, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4960249522940672, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4960249522940672, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
-      propertyPath: m_RootOrder
-      value: 19
-      objectReference: {fileID: 0}
-    - target: {fileID: 114092957609565500, guid: ab8cd3b30b8f16647a3a7f8baecea83e,
-        type: 2}
-      propertyPath: name
-      value: "wi\u0119zienia"
-      objectReference: {fileID: 0}
-    - target: {fileID: 114092957609565500, guid: ab8cd3b30b8f16647a3a7f8baecea83e,
-        type: 2}
-      propertyPath: sceneID
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 1737258233563074, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
-      propertyPath: m_Name
-      value: LabirynthEntry (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 61317458786516846, guid: ab8cd3b30b8f16647a3a7f8baecea83e,
-        type: 2}
-      propertyPath: m_Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 61317458786516846, guid: ab8cd3b30b8f16647a3a7f8baecea83e,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 6.124626
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab8cd3b30b8f16647a3a7f8baecea83e, type: 2}
