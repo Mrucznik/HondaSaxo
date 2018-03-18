@@ -1,0 +1,107 @@
+1. Borys
+-B- Hej! Elektrij! Jak tam zdrowie? Może napijemy się razem, mam tu najlepszy towar domowej roboty, hehe.
+
+-E-1. Nie mam czasu stary chlejusie.
+-E-2. Niestety ale śpieszę z pomocą ludziom w szpitalu, ale chętnie kupiłbym od Ciebie trochę twojego towaru.
+-E-3. Borys! Mój najlepszy kompan do picia. Wypijmy za rewolucję!
+
+-B-1. A to poshol von! Cyka blyat!
+-B-2. Trzymaj tą flachę, woltaż 60%, zwala z nóg. Tylko 500 rubli.
+-B-3. Na zdrovie! ** Wypija setę do dna wychwalając rewolucję **
+
+-E-1. --
+-E-2. Dzięki brachu, do zobaczenia.
+-E-3. --
+
+2. Dimitrij 
+-D- Witaj barcie! Słyszazłeś co się stało?
+
+-E- Tak, słyszałem o awarii zasilania w szpitalu i więzieniu. Czy wiesz może, co sie tam stało?
+
+-D- Tak, powinieneś się tam jak najszybciej udać. Zasilanie inkubatorów uległo awarii. Okablowanie jest w największym pokoju z łóżkami. Śpiesz się, trzeba uratować te dzieci!
+
+-E- Dziękuje, przyjacielu!
+
+
+3. Wania
+-E- Cześć Wania!
+-W- Cześć Elektrij.
+-E- Czy słyszałeś coś problemach z zasilaniem i więzieniu?
+-W- Nie.
+-E- Trudno, bywaj zdrów.
+
+4. Elena
+-Elena- Elektrij ratuj! Mój syn leży w szpitalu na oddziale intensywnej terapii. Pomóż mu proszę. W szpitalu brakło zasilania i sytuacja ta może spowodować śmierć większości pacjentów!
+
+-E- Spokojnie, właśnie tam zmierzam. Czy wiesz, gdzie znajduje się pomieszczenie, z którego mógłbym dostać się do miejsca awarii?
+
+-Elena- Tak, awaria znajduje się przy stołówce.
+
+-E- Dziękuje Elena. Zrobię wszystko co w mojej mocy.
+
+5. Igor
+-I- Igor nie mieć czasu, Igor kopać węgiel.
+
+6. Iwan
+-I- Nie zawracaj mi głowy!
+
+7. Nikolai
+-N- Chwała Carowi! Co Cię Tu sprowadza Elektrij?
+
+-E- Witaj, Nikolai. Czy wiesz coś o awariach w szpitalu i więzieniu.
+
+-N- Tak. Słyszałem, że spora część więźniów, która leży w więziennym szpitalu umrze, jeżeli ktoś szybko nie naprawi agregatu prądotwórczego.
+
+-E- Czy wiesz gdzie go znajdę?
+
+-N- Niestety nie, ale spytaj Saszy, on tam pracuje.
+
+-E- Dzięki, bywaj.
+
+8. Nina
+-N- Hej, przystojniaku.
+
+9. Sasza
+-E- Witaj, Sasza. Słyszałem, że jest problem z zasilaniem w więzieniu.
+
+-S- Witaj, Elektrij. Tak, mamy awarię i te szumowiny uciekną i zaczną znowu zabijać, jeżeli nie naprawisz bramy.
+
+-E- 1. Czy wiesz gdzie jest zepsuty agregat prądotwórczy zasilający skrzydło szpitalne?
+-E- 2.  Gdzie znajdę okablowanie związane z usterką bramy?
+
+-S- 1. Co? Chcesz ratować tych kryminalistów!? W takim razie lepiej nie rób nic, z chęcią ich powystrzelam jak będą próbowali uciekać.
+-S- 2. Znajdziesz ją jeżeli pójdziesz drogą na lewo od wejścia. Pośpiesz się, bo te szumowiny uciekną i będę musiał zająć się nimi osobiście.
+
+10. Sergiej
+-S- Słuchaj, nie chcesz może zarobić? W więzieniu znajduje się mój... partner biznesowy, a brak zasilania w więzieniu sprawi mi dobrą okazję do odnowienia z nim kontaktu. 
+
+-S- Zamiast naprawiać całe zasilanie, idź uruchomić agregat prądotwórczy w sektorze szpitalnym, droga na wprost gdy wejdziesz do środka. Odwdzięczę się, gdy już będzie po wszystkim. Co ty na to?
+
+-E- 1. Co dostanę w zamian?
+-E- 2. Zapomnij, szelmo.
+
+-S- 1. Mogę zaoferować Ci pieniądzę lub przysługę. W każdym razie na pewno się nie zawiedziesz, jeśli mi pomożesz.
+-S- 2. Jak chcesz, nie wiesz, co tracisz.
+
+-E- 1. Zatem niech tak będzie, dług odbiorę po udanej akcji.
+-E- 2. Zapomnij, szelmo.
+
+-S- 1. Interesy z Tobą to przyjemność.
+-S- 2. Jak chcesz, nie wiesz, co tracisz.
+
+11. Tamara
+-T- Elektrij, szybko, trzeba włączyć sekcję zasilania w inkubatorach!
+-S- Spokojnie, słyszałem już o problemach w szpitalu. Gdzie znajdę sekcję zasilającą?
+-T- Jest na końcu prawego korytarza, musisz minąć wszystkie sale szpitalne.
+-S- Dzięki, śpieszę to naprawić.
+
+12. Tatiana
+-T- Nie mam teraz czasu, muszę pomóc mężowi zarządzać farmą. Wybacz, Elektrij.
+
+Zakończenia:
+- Naprawa inkubatorów - 
+- Intensywna terapia - 
+- Skrzydło szpitalne - część więzniów ucieka
+- Brama więzienna - część więzniów umiera
+
+Wskazówki do uzyskania:
