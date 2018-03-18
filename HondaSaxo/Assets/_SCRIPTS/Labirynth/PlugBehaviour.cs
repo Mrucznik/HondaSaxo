@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlugBehaviour : MonoBehaviour
 {
@@ -67,7 +68,8 @@ public class PlugBehaviour : MonoBehaviour
 
         if (collision.transform.tag == "Finish")
         {
-            Debug.Log("Destination reached");
+            StoryManager.GetInstance().ActiveQuest.EndQuest();
+            SceneManager.LoadScene(1);
         }
     }
 
