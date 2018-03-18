@@ -7454,7 +7454,7 @@ GameObject:
   - component: {fileID: 933110451}
   - component: {fileID: 933110450}
   m_Layer: 0
-  m_Name: plug
+  m_Name: socket
   m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32494,7 +32494,7 @@ GameObject:
   - component: {fileID: 1765538811}
   - component: {fileID: 1765538810}
   m_Layer: 0
-  m_Name: plug2
+  m_Name: socket2
   m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
