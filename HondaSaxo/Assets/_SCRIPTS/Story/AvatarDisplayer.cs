@@ -39,10 +39,10 @@ namespace Assets._SCRIPTS.Story
                     this.gameObject.GetComponent<Image>().sprite = Dimitrij;
                     break;
                 case "Elena":
-                    this.gameObject.GetComponent<Image>().sprite = Dimitrij;
+                    this.gameObject.GetComponent<Image>().sprite = Elena;
                     break;
                 case "Igor":
-                    this.gameObject.GetComponent<Image>().sprite = Dimitrij;
+                    this.gameObject.GetComponent<Image>().sprite = Igor;
                     break;
                 case "Iwan":
                     this.gameObject.GetComponent<Image>().sprite = Iwan;
@@ -72,7 +72,7 @@ namespace Assets._SCRIPTS.Story
                     this.gameObject.GetComponent<Image>().sprite = Wania;
                     break;
                 default:
-                    this.GetComponentInChildren<Image>().sprite = Wania;
+                    this.GetComponentInChildren<Image>().sprite = Elektrij;
                     break;
             }
         }
