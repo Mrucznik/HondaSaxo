@@ -1,12 +1,11 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 
 namespace Assets._SCRIPTS.Story
 {
     public class DialogChoice : IDialog
     {
-        private readonly IDialog[] _nextDialog = new IDialog[3];
-        private readonly string[] _choices = new string[3];
+        private readonly IDialog[] _nextDialog;
+        private readonly string[] _choices;
         private readonly string _title;
         private readonly Character _character;
         private int _activeChoice = 0;
@@ -15,12 +14,32 @@ namespace Assets._SCRIPTS.Story
         {
             _title = title;
             _character = character;
+
+            _nextDialog = new IDialog[3];
+            _choices = new string[3];
+
             _nextDialog[0] = nextDialog1;
             _nextDialog[1] = nextDialog2;
             _nextDialog[2] = nextDialog3;
+
             _choices[0] = choice1;
             _choices[1] = choice2;
             _choices[2] = choice3;
+        }
+
+        public DialogChoice(string title, Character character, string choice1, IDialog nextDialog1, string choice2, IDialog nextDialog2)
+        {
+            _title = title;
+            _character = character;
+
+            _nextDialog = new IDialog[2];
+            _choices = new string[2];
+
+            _nextDialog[0] = nextDialog1;
+            _nextDialog[1] = nextDialog2;
+
+            _choices[0] = choice1;
+            _choices[1] = choice2;
         }
 
         public void NextActiveOption()
