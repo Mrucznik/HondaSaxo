@@ -7,11 +7,18 @@ using UnityEngine.SceneManagement;
 
 namespace Assets._SCRIPTS.Story
 {
-    class HospitalLabirynthDialog : IDialog
+    class DoorDialog : IDialog
     {
+        private int sceneID;
+
+        public DoorDialog(int sceneID)
+        {
+            this.sceneID = sceneID;
+        }
+
         public void Display()
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(sceneID);
         }
 
         public IDialog GetNextDialog()
