@@ -6,6 +6,7 @@ Cutscenka z ciemnym tłem i "wystukiwanym" textem
 
 Gopnik - 2137, Rosja. 14 Wrzesień,
 Miasto pogrążone w wojnie domowej. Tysiące ludzi w potrzebie. Brakuje podstawowych towarów: chleba, cukru, wódki. Na ulicach ścierają się wrogie sobie frakcje. Ludzie boją się wychodzić z domów.
+W radiu nadano komunikat o awarii zasilaniu w szpitalu oraz więzieniu.
 W takich czasach przyszło mi żyć. Mi, Elektrijowi, wybitnemu elektrykowi i weteranowi bitwy pod Putingradem (2118). 
 Nie pozostanę bierny i nie pozwolę moim towarzyszom ginąć.
 Słyszałem o wielu awariach w mieście, trzeba coś z tym zrobić, zanim zginą niewinni ludzie. 
@@ -38,7 +39,7 @@ Nikolai - Były pracownik elektrownii. Konserwatysta. (Elektrownia) [carat]
 Nina - Lekkich obyczajów, nimfomanka, bałamuci pacjentów. (Szpital) [neutralna]
 Sasza - Strażnik więzienny. Okrutnik, materialista. Łapówkarz. (Więzienie) [carat]
 Sergiej - Cwaniak, kombinator, oportunista. (Więzienie) [neutralna]
-Tamara - Pięlęgniarka, kradnie spirytus z zasobu szpitala. (Szpital) [rewolucjonista]
+Tamara - Pięlęgniarka, cwaniara, kradnie spirytus z zasobu szpitala. (Szpital) [rewolucjonista]
 Tatiana - Żona właściciela farmy. Twarda sztuka. (Farma) [carat]
 
 Natasza - NULL
